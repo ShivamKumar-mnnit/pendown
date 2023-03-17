@@ -1,18 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import './navbar.css';
-
+import coin from '../img/final_coin.png';
 
 
 const navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar navbar bg-dark">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">ShopZO</Link>
+    <Link className="navbar-brand" to="/">ShopzO</Link>
 
     <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input className="form-control me-2" type="Search " placeholder="Search" aria-label="Search" />
+        <button className="btn btn-outline-success" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
       </form>
 
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,16 +26,16 @@ const navbar = () => {
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">signin/signup</Link>
+          <Link className="nav-link" to="/">Sign-in / Sign-up</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">returns&orders</Link>
+          <Link className="nav-link" to="/">Returns & orders</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/"><i class="fa-solid fa-cart-shopping">1</i></Link>
+          <Link className="nav-link" to="/"><i className="fa-solid fa-cart-shopping">1</i>cart</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">coin</Link>
+          <Link className="nav-link" to="/"><img src={coin} alt='#' width="30" height="30"></img>200</Link>
         </li>
         
       </ul>
