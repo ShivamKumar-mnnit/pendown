@@ -1,0 +1,10 @@
+.card{
+    width: 35rem;
+}
+.bold{
+    font-weight: bolder;
+    font-size: 50px;
+}
+.bg-color{
+    background-color: rgb(231, 236, 236);
+}
