@@ -11,7 +11,7 @@ const signup = () => {
     <form className='container --bs-light '>
       <div className="text-center">
     <div className='bold my-1 disabled'>Sign Up</div>
-    <div className="text-center my-1">New to ShopzO ? Sign Up for free </div>
+    <div className="text-center my-1 text-decoration-none "><Link to="/signin">Login here </Link></div>
     </div>
     <div className="row">
   <div className="col">

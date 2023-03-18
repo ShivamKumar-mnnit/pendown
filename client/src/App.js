@@ -10,20 +10,19 @@ import Crousel from './components/body/crousel';
 import Signup from "./components/signup/signup";
 import Product from './components/body/product';
 import Footer from './components/footer/footer';
+import Intro from './components/productDesc/intro';
 function App() {
   return (
     <>
     <Router>
     
     <Routes>
-    <Route element={<Navbar/>} exact path='/' ></Route>
+    <Route element={[<Navbar/>,<Categorynav/>,<Crousel />,<Product/>,<Footer/>] } exact path='/' ></Route>
       <Route element={<Signin/>} exact path='/signin' ></Route>
       <Route element={<Signup/>} exact path='/signup' ></Route>
+      <Route element={<Intro/>} exact path='/product'></Route>
       </Routes>
-    <Categorynav/>  
-    <Crousel />
-    <Product/>
-    <Footer/>
+     
     </Router>
     </>
   );
