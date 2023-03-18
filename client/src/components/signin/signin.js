@@ -1,5 +1,6 @@
 import React from 'react'
 import './signin.css';
+import {Link} from 'react-router-dom';
 import logo from '../../img/logo_shopzo.png';
 const signin = () => {
   return (
@@ -23,7 +24,7 @@ const signin = () => {
     </div>
     <button type="submit" className="btn btn-primary mb-3">Login</button>
     <div className="para">By continuing, you agree to ShopzO's Conditions of Use and Privacy Notice.</div>
-    <button className='btn btn-primary my-2 d-flex justify-content-center'>Create Your ShopzO account</button>
+    <Link to='/signup'><button className='btn btn-primary my-2 d-flex justify-content-center'>Create Your ShopzO account</button></Link>
   </form>
   </div>
   </div>
