@@ -10,7 +10,7 @@ const categorynav = () => {
 <ul className="nav nav-tabs bg-secondary settingwidth">
 
 <Link className="nav-link" to="/">
-    <button className="btn btn-secondary menuimageside" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i className="fa-solid fa-bars"></i></button>
+    <button className="btn btn-secondary menuimageside highzindex" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i className="fa-solid fa-bars"></i></button>
 
 <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
 

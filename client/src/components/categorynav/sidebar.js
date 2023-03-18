@@ -2,7 +2,7 @@ import React from 'react'
 
 const sidebar = () => {
   return (
-    <ul className="list-group-item">
+    <ul className="list-group-item highzindex">
     <li className="list-group-item"><i className="fa-solid fa-user"></i> Guest</li>
     <li className="list-group-item"> <i className="fa-solid fa-bag-shopping"></i> Product Categories</li>
     <li className="list-group-item"><i className="fa-solid fa-square"></i> Orders</li>
