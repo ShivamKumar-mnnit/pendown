@@ -6,3 +6,12 @@
     height: 35px;
     background: rgb(108, 107, 106);
 }
+.menuimageside {
+    /* margin-bottom: -3px; */
+    width: 40px;
+    height: 23px;
+    padding-bottom: -32px;
+    padding: 0px;
+    padding-top: -20px;
+    margin-top: -10px;
+}

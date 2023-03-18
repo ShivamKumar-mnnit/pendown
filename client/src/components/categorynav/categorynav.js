@@ -7,7 +7,7 @@ const categorynav = () => {
   return (
 <div className='d-flex flex-grow-1'>
 
-<button className="btn btn-primary settingsidebar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i className="fa-solid fa-bars"></i></button>
+
 
 <div className="offcanvas offcanvas-start" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div className="offcanvas-header">
@@ -16,38 +16,43 @@ const categorynav = () => {
   </div>
   
 </div>
-<nav className="navbar navbar-expand-lg bg-body-tertiary bg-secondary settingwidth">
 
-  <div className="container-fluid">
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Clothing</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/">Electronics</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/">Home appliances</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/">Books</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/">Health & Beauty Products</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/">Food & Grocery</Link>
-        </li>
-        
-      </ul>
-    </div>
+
+<ul className="nav nav-tabs bg-secondary settingwidth">
+
+<Link className="nav-link" to="/">
+    <button class="btn btn-secondary menuimageside" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+  <Sidebar/>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-</nav>
+  
+</div>
+  
+    </Link>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Electronics</Link>
+  </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Home appliances</Link>
+  </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Books</Link>
+  </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Health & Beauty Products</Link>
+  </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Food & Grocery</Link>
+  </li>
+  <li className="nav-item">
+    <Link className="nav-link" to="/">Clothing</Link>
+  </li>
+</ul>
+
 </div>
   )
 }
