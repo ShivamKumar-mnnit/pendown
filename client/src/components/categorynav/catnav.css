@@ -1,6 +1,7 @@
 .settingwidth{
     width: 100%;
     height: 35px;
+    text-overflow: hidden;
 }
 .settingsidebar{
     height: 35px;
@@ -14,4 +15,8 @@
     padding: 0px;
     padding-top: -20px;
     margin-top: -10px;
+}
+
+.offcanvas.show {
+    width: auto;
 }
