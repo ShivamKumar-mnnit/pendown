@@ -5,7 +5,6 @@ const crousel = () => {
   return (
     <>
     
-  
 
     <div id="carouselExampleCaptions" className="carousel slide lowzindex" data-bs-ride="false">
   <div className="carousel-indicators">
