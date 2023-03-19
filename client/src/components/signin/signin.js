@@ -1,7 +1,7 @@
 import React from 'react'
 import './signin.css';
 import {Link} from 'react-router-dom';
-import logo from '../../img/logo_shopzo.png';
+import logo from '../../img/logo-3.png';
 const signin = () => {
   return (
     
