@@ -1,13 +1,10 @@
+.card{
+    border: 2px solid orangered;
+    box-shadow: 2px orangered;
+    border-radius: 10px;
+}
 
-  h1 {
-    color: #fff;
-    padding: 10px 0;
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(211, 238, 230, 0.2);
-    transition: 0.3s;
-    border: none;
-   
-    
-  }
-  
+.card-body{
+    font-family: cursive;
+    font-weight: bold;
+}
