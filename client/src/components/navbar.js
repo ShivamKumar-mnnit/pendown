@@ -1,9 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import './navbar.css';
 import logo from '../img/logo-3.png';
 
-const navbar = () => {
+const Navbar = () => {
+
+  const navigate = useNavigate();
+  const handleLogout =()=>{
+    localStorage.removeItem('token');
+    navigate('/signin');
+  }
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
@@ -23,14 +31,20 @@ const navbar = () => {
             <Link className="nav-link active" aria-current="page" to="/event">events</Link>
           </li>
         </ul>
+
+        {!localStorage.getItem('token') ?
         <form className="d-flex" role="search">
-          <button className="btn btn-outline-warning mx-2 " type="submit">Login</button>
-          <button className="btn btn-outline-warning mx-2" type="submit">Register now</button>
-        </form>
+          <Link to='/signin'><button className="btn btn-outline-warning mx-2 " type="submit">Login</button></Link>
+          <Link to='/signup'><button className="btn btn-outline-warning mx-2" type="submit">Register now</button></Link>
+        </form> :
+        <form className="d-flex" role="search">
+        <Link to='/'><button className="btn btn-outline-warning mx-2 " type="submit">Your Profile</button></Link>
+        <button className="btn btn-outline-warning mx-2" onClick={handleLogout}  type="submit">Logout</button>
+      </form>}
       </div>
     </div>
   </nav>
   )
 }
 
-export default navbar
+export default Navbar
