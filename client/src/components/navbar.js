@@ -20,7 +20,7 @@ const navbar = () => {
           </li><li className="nav-item mx-3">
             <Link className="nav-link active" aria-current="page" to="/">Testimonials</Link>
           </li><li className="nav-item mx-3">
-            <Link className="nav-link active" aria-current="page" to="/">events</Link>
+            <Link className="nav-link active" aria-current="page" to="/event">events</Link>
           </li>
         </ul>
         <form className="d-flex" role="search">
