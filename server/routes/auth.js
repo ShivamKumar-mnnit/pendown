@@ -11,14 +11,9 @@ const JWT_SECRET = 'shivamisgoodb$oy';
 
 //1.creating an user using : POST '/api/auth'  auth doesnot requires
 router.post('/createuser',[
-    body('f_name','Enter a valid first name').isLength({min: 3}),
-    body('l_name','Enter a valid last name').isLength({min: 1}),
+    body('name','Enter a valid name').isLength({min: 3}),
     body('email','Enter a valid email').isEmail(),
     body('password','Enter a strong password(atleast 8 character)').isLength({min: 8}),
-    body('address','Enter your address').isLength({min: 1}),
-    body('city','Enter your city').isLength({min: 1}),
-    body('state','Enter your state').isLength({min: 1}),
-    body('zip','Enter zip code').isLength({min: 6}),
 ], async(req,res)=>{
     let success = false;
     //if there are error return bad request and errrors
@@ -39,14 +34,9 @@ secPass= await bcrypt.hash(req.body.password,salt);
 
 //create a new user
     user = await User.create({
-        f_name:req.body.f_name,
-        l_name:req.body.l_name,
+        name:req.body.name,
         email:req.body.email,
         password:secPass,
-        address: req.body.address,
-        city: req.body.city,
-        state: req.body.state,
-        zip: req.body.zip,
     })
 
     const data = {

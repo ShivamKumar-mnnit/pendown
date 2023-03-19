@@ -9,7 +9,7 @@ const signin = () => {
     <div className="card bg-color">
     <form className='container --bs-light '>
       <div className="text-center">
-        <div className="logo"><img src={logo} alt="#" /></div>
+        <div className="logo"><Link to="/"><img src={logo} alt="#" /></Link></div>
     <div className='bold my-1 disabled'>Login</div>
     <div className="text-center my-1">New to ShopzO? Signup for free </div>
     </div>
@@ -24,7 +24,7 @@ const signin = () => {
     </div>
     <button type="submit" className="btn btn-primary mb-3">Login</button>
     <div className="para">By continuing, you agree to ShopzO's Conditions of Use and Privacy Notice.</div>
-    <Link to='/signup'><button className='btn btn-primary my-2 d-flex justify-content-center'>Create Your ShopzO account</button></Link>
+    <Link to='/signup' className='text-decoration-none'><button className='btn btn-primary my-2 d-flex justify-content-center'>Create Your ShopzO account</button></Link>
   </form>
   </div>
   </div>
