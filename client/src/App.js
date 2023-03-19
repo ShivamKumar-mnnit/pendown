@@ -10,7 +10,7 @@ import Crousel from './components/body/crousel';
 import Signup from "./components/signup/signup";
 import Product from './components/body/product';
 import Footer from './components/footer/footer';
-import Intro from './components/productDesc/intro';
+import Work from './components/work/howwork';
 function App() {
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
     <Route element={[<Navbar/>,<Categorynav/>,<Crousel />,<Product/>,<Footer/>] } exact path='/' ></Route>
       <Route element={<Signin/>} exact path='/signin' ></Route>
       <Route element={<Signup/>} exact path='/signup' ></Route>
-      <Route element={<Intro/>} exact path='/product'></Route>
+      <Route element={<Work/>} exact path='/working'></Route>
       </Routes>
      
     </Router>

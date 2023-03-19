@@ -8,7 +8,7 @@ const navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary navbar navbar bg-dark">
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/product">ShopzO</Link>
+    <Link className="navbar-brand" to="/working">ShopzO</Link>
 
     <form className="d-flex" role="search">
         <input className="form-control me-2" type="Search " placeholder="Search" aria-label="Search" />
