@@ -4,22 +4,25 @@ import {
   Routes,Route
 } from "react-router-dom";
 import Navbar from './components/navbar';
-
 import Signin from "./components/signin/signin";
+import Categorynav from "./components/categorynav/categorynav";
+import Crousel from './components/body/crousel';
 import Signup from "./components/signup/signup";
+import Product from './components/body/product';
 import Footer from './components/footer/footer';
+import Work from './components/work/howwork';
 function App() {
   return (
     <>
     <Router>
     
     <Routes>
-    <Route element={<Navbar/>} exact path='/' ></Route>
+    <Route element={[<Navbar/>,<Categorynav/>,<Crousel />,<Product/>,<Footer/>] } exact path='/' ></Route>
       <Route element={<Signin/>} exact path='/signin' ></Route>
       <Route element={<Signup/>} exact path='/signup' ></Route>
+      <Route element={<Work/>} exact path='/working'></Route>
       </Routes>
-
-    <Footer/>
+     
     </Router>
     </>
   );
