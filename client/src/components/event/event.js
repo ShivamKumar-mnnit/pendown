@@ -1,45 +1,46 @@
 import React from 'react'
 import './event.css';
+import { Link } from 'react-router-dom';
 
 const Event = () => {
   return (
     <div
-       class="bodyevent">
-       <h1 class="title text-center py-4 titleofevent">Glass card</h1>
-       <div class="row py-5">
-        <div class="col-md-6 d-flex justify-content-center">
+       className="bodyevent">
+       <h1 className="title text-center py-4 titleofevent">Glass card</h1>
+       <div className="row py-5">
+        <div className="col-md-6 d-flex justify-content-center">
 
-        <div class="card m-2 cbl text-center cardofevent">
+        <div className="card m-2 cbl text-center cardofevent">
   
-  <div class="card-body">
+  <div className="card-body">
 
-  <span class="card-number fw-bold">04</span>
+  <span className="card-number fw-bold">04</span>
 
-    <h2 class="card-title mb-4">Asce</h2>
-
-
+    <h2 className="card-title mb-4">Asce</h2>
 
 
-    <p class="card-text">Suresh</p>
-    <a href="#" class="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</a>
+
+
+    <p className="card-text">Suresh</p>
+    <Link to="/" className="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</Link>
   </div>
 </div>
 
         </div>
-        <div class="col-md-6 d-flex justify-content-center">
-        <div class="cardofevent m-2 cb2 text-center cardofevent">
+        <div className="col-md-6 d-flex justify-content-center">
+        <div className="cardofevent m-2 cb2 text-center cardofevent">
   
-  <div class="card-body">
+  <div className="card-body">
 
-  <span class="card-number fw-bold">04</span>
+  <span className="card-number fw-bold">04</span>
 
-    <h2 class="card-title mb-4">Asce</h2>
-
-
+    <h2 className="card-title mb-4">Asce</h2>
 
 
-    <p class="card-text">Suresh</p>
-    <a href="#" class="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</a>
+
+
+    <p className="card-text">Suresh</p>
+    <Link to="/" className="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</Link>
   </div>
 </div>
         </div>
