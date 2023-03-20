@@ -1,44 +1,53 @@
 import React from 'react'
-import './event.css'
+import './event.css';
 
-const event = () => {
+const Event = () => {
   return (
-    <>
-    <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand mx-4" href="#">Event</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <button type="button" class="btn btn-warning mx-4">Create event</button>
-        </div>
-    </div>
-</nav>
-<div className='container'> 
+    <div
+       class="bodyevent">
+       <h1 class="title text-center py-4 titleofevent">Glass card</h1>
+       <div class="row py-5">
+        <div class="col-md-6 d-flex justify-content-center">
+
+        <div class="card m-2 cbl text-center cardofevent">
   
-<div class="card" width="18rem">
-  <img src="..." class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-  <div class="card-body">
-    <a href="/" class="card-link" >Card link</a>
-    <a href="/" class="card-link">Another link</a>
+
+  <span class="card-number fw-bold">04</span>
+
+    <h2 class="card-title mb-4">Asce</h2>
+
+
+
+
+    <p class="card-text">Suresh</p>
+    <a href="#" class="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</a>
   </div>
 </div>
 
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+        <div class="cardofevent m-2 cb2 text-center cardofevent">
+  
+  <div class="card-body">
+
+  <span class="card-number fw-bold">04</span>
+
+    <h2 class="card-title mb-4">Asce</h2>
+
+
+
+
+    <p class="card-text">Suresh</p>
+    <a href="#" class="btn btn-btn-outline-light btn-warning btnofevent">Go somewhere</a>
+  </div>
 </div>
-</>
+        </div>
+       </div>
+
+    </div>
+    
   )
 }
 
-export default event
+export default Event
