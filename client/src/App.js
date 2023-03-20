@@ -10,6 +10,7 @@ import Footer from './components/footer/footer';
 import Event from "./components/event/event";
 import Student from "./components/profile/student";
 import Body from "./components/body/body";
+import Quicknote from './components/quicknotes/Notesapp/notes';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
       <Route element={<Signup/>} exact path='/signup' ></Route>
       <Route element={<Event/>} exact path='/event' ></Route>
       <Route element={<Student/>} exact path='/student' ></Route>
+      <Route element={[<Navbar/>,<Quicknote/>]} exact path='/quicknote' ></Route>
       </Routes>
 
     </Router>

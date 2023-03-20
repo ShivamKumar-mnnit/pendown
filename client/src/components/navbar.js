@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import {Link,  useNavigate } from 'react-router-dom'
 import './body/css/style.css';
 import './body/css/clash-display.css';
 import logo from '../img/logo-3.png';
 
+import { Link as ALink} from 'react-scroll';
 const Navbar = () => {
 
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const Navbar = () => {
      
     <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/">
                 <img src={logo} width={80} alt="" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -27,29 +28,42 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
+
+
+
+                {!localStorage.getItem('token') ?
+        <li className="nav-item">
+        <Link className="nav-link" to="/">Quick Notes</Link>
+        </li> :
+        <li className="nav-item">
+        <Link className="nav-link" to="/quicknote">Quick Notes</Link>
+        </li>
+        }
+
+
+
+
+                    
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Quick Notes</Link>
+                        <ALink className="nav-link" to="about">About</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#about">About</Link>
+                        <ALink className="nav-link" to="services">Services</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#services">Services</Link>
+                        <ALink className="nav-link" to="portfolio">Portfolio</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#portfolio">Portfolio</Link>
+                        <ALink className="nav-link" to="reviews">Reviews</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#reviews">Reviews</Link>
+                        <ALink className="nav-link" to="team">Team</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#team">Team</Link>
+                        <ALink className="nav-link" to="contact">Contact</ALink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="#contact">Contact</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="#blog">Blog</Link>
+                        <ALink className="nav-link" to="blog">Blog</ALink>
                     </li>
                 </ul>
                 {!localStorage.getItem('token') ?
