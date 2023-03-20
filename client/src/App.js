@@ -21,7 +21,7 @@ function App() {
       <Route element={<Signin/>} exact path='/signin' ></Route>
       <Route element={<Signup/>} exact path='/signup' ></Route>
       <Route element={<Event/>} exact path='/event' ></Route>
-      <Route element={<Student/>} exact path='/student' ></Route>
+      <Route element={[<Navbar/>,<Student/>,<Footer/>]} exact path='/student' ></Route>
       <Route element={[<Navbar/>,<Quicknote/>]} exact path='/quicknote' ></Route>
       </Routes>
 

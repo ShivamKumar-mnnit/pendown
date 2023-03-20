@@ -1,0 +1,15 @@
+.img-background-profile{
+    background-image: url(../../img/background.jpg);
+    background-size: cover;
+}
+
+.text-area-height{
+    height: 20rem;
+}
+p{
+    color: black;
+}
+
+.widthcardstudent{
+    width: 30rem;
+}
