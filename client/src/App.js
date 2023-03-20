@@ -9,6 +9,7 @@ import Signin from "./components/signin/signin";
 import Signup from "./components/signup/signup";
 import Footer from './components/footer/footer';
 import Event from "./components/event/event";
+import Student from "./components/profile/student";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
       <Route element={<Signin/>} exact path='/signin' ></Route>
       <Route element={<Signup/>} exact path='/signup' ></Route>
       <Route element={<Event/>} exact path='/event' ></Route>
+      <Route element={<Student/>} exact path='/student' ></Route>
       </Routes>
 
     </Router>

@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
           <li className="nav-item mx-3">
-            <Link className="nav-link active " aria-current="page" to="/">your profile</Link>
+            <Link className="nav-link active " aria-current="page" to="/student">your profile</Link>
           </li><li className="nav-item mx-3">
             <Link className="nav-link active" aria-current="page" to="/">Quick notes</Link>
           </li><li className="nav-item mx-3">
