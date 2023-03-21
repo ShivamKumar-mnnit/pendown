@@ -19,7 +19,7 @@ const Navbar = () => {
      
     <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
-            <Link className="navbar-brand" to="/profile">
+            <Link className="navbar-brand" to="/">
                 <img src={logo} width={80} alt="" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -72,7 +72,7 @@ const Navbar = () => {
           <Link to='/signup'><button className="btn btn-outline-warning mx-2" type="submit">Register now</button></Link>
         </form> :
         <form className="d-flex" role="search">
-        <Link to='/student'><button className="btn btn-outline-warning mx-2 " type="submit">Your Profile</button></Link>
+        <Link to='/profile'><button className="btn btn-outline-warning mx-2 " type="submit">Your Profile</button></Link>
         <button className="btn btn-outline-warning mx-2" onClick={handleLogout}  type="submit">Logout</button>
       </form>}
             </div>
