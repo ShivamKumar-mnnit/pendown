@@ -19,7 +19,7 @@ const Navbar = () => {
      
     <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/profile">
                 <img src={logo} width={80} alt="" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

@@ -12,7 +12,7 @@ const mentor = () => {
 <div className="container emo=profile py-5 "  >
   <form method="">
     <div className="grid d-flex justify-content-center my-5">
-    <button type="button" className="btn btn-lg btn-primary "  disabled></button>
+    <button type="button" className="btn btn-lg btn-warning "  disabled></button>
       <div className="card ">
         <div className="shadow bg-body rounded"></div>
         <div className="row" >
@@ -28,7 +28,9 @@ const mentor = () => {
               <p className="profile-year mt-1 mb-1 fw-bold" >Year:</p>
               <p className="profile-emailid mt-1 mb-1 fw-bold"><i className="fa-solid fa-envelope"></i>Email:</p>
               <p className="profile-mobileNumber mt-1 mb-1 fw-bold"><i className="fa-solid fa-mobile"></i>+91</p>
+              <p className="profile-year mt-1 mb-1 fw-bold" >Tag</p>
             </div>
+
           </div>
 
           <div className="card mx-5 widthcardstudent">
@@ -97,7 +99,7 @@ const mentor = () => {
             </div>
         </div>       
       </div> 
-      <button type="button" className="btn btn-lg btn-primary" disabled></button>
+      <button type="button" className="btn btn-lg btn-warning" disabled></button>
     </div>
   </form>  
 </div>

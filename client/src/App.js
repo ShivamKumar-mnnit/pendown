@@ -23,7 +23,7 @@ function App() {
       <Route element={<Signup/>} exact path='/signup' ></Route>
       <Route element={<Event/>} exact path='/event' ></Route>
       <Route element={[<Navbar/>,<Student/>,<Footer/>]} exact path='/student' ></Route>
-      <Route element={[<Navbar/>,<Mentor/>,<Footer/>]} exact path='/mentor' ></Route>
+      <Route element={[<Navbar/>,<Mentor/>,<Footer/>]} exact path='/profile' ></Route>
       <Route element={[<Navbar/>,<Quicknote/>]} exact path='/quicknote' ></Route>
       </Routes>
 
