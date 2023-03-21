@@ -1,5 +1,5 @@
 .img-background-profile{
-    background-image: url(../../img/background.jpg);
+    background-image: url(../../img/mentorBg.jpg);
     background-size: cover;
 }
 
@@ -19,3 +19,4 @@ p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
+
