@@ -90,7 +90,7 @@ router.delete('/deleteevent/:id', fetchuser, async (req, res) => {
 
 
         event = await Event.findByIdAndDelete(req.params.id)
-        res.json({ "Success": "Note has been deleted", event: event });
+        res.json({ "Success": "Event has been deleted", event: event });
     } catch (error) {
         console.log(error.message);
         res.status(500).send("Internal Server Error");

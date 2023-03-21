@@ -46,7 +46,7 @@ router.post('/addprofile', fetchuser, [
         }
 
         const profile = new Profile({
-            name: req.user.name, branch, regno,year,email: req.user.email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2, user: req.user.id
+            name,branch, regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2, user: req.user.id
         })
 
         const savedProfile = await profile.save()
@@ -109,7 +109,7 @@ router.delete('/deleteprofile/:id', fetchuser, async (req, res) => {
 
 
         profile = await Profile.findByIdAndDelete(req.params.id)
-        res.json({ "Success": "Note has been deleted", profile: profile });
+        res.json({ "Success": "Profile has been deleted", profile: profile });
     } catch (error) {
         console.log(error.message);
         res.status(500).send("Internal Server Error");
