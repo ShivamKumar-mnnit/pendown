@@ -13,6 +13,7 @@ import Mentor from "./components/profile/mentor";
 import Body from "./components/body/body";
 import Alert from './Alert';
 import Home from './components/quicknotes/Home';
+import Team from "./components/team/team";
 
 import NoteState from './Context/notes/NotesState';
 import ProfileState from './Context/profiles/ProfilesState';
@@ -48,6 +49,7 @@ function App() {
       <Route element={<Student showAlert={showAlert}/>} exact path='/student' ></Route>
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
       <Route element={<Home showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
+      <Route element={<Team />} exact path='/team' ></Route>
       </Routes>
       <Footer/>
     </Router>
