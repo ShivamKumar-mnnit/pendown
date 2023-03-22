@@ -1,7 +1,6 @@
 import React from 'react'
 import profilePic from "../../img/mentor.jpg"
-import bgImage from "../../img/mentorBg.jpg"
-import { Link } from 'react-router-dom';
+
 const mentor = () => {
   return (
     <div>

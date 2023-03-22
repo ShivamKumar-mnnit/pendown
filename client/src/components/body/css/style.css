@@ -192,13 +192,13 @@ img {
 
 /* PORTFOLIO */
 .portfolio-item .iconbox {
-    background-color: var(--c-brand);
-    color: white;
+    background-color:rgb(208, 19, 126);
+    color: rgb(37, 58, 195);
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
+    opacity: 0.1;
 }
 
 .portfolio-item:hover .iconbox {
@@ -232,12 +232,12 @@ img {
     background-color: var(--c-brand);
     position: absolute;
     bottom: -24px;
-    left: 50%;
-    width: calc(100% - 50px);
+    left: 30%;
+    width: calc(70% - 30px);
     transform: translateX(-50%);
     padding: 24px;
     transition: var(--transition);
-    opacity: 0;
+    opacity: 0.3;
 }
 
 .team-member:hover .team-member-content {
