@@ -1,0 +1,125 @@
+import React, { useState } from "react";
+import ProfileContext from "./ProfileContext";
+
+const ProfileState = (props) => {
+    const host = 'http://localhost:8001'
+
+    const profilesInitial = []
+
+    const [profiles, setProfiles] = useState(profilesInitial);
+
+
+    //Get all profiles
+    const getProfiles = async () => {
+        //API call
+        const response = await fetch(`${host}/api/profiles/fetchprofile`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')            },
+        });
+
+        const json = await response.json();
+        setProfiles(json);
+
+       }
+
+
+
+    //Add a Profile
+    const addProfile = async (name,branch,regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2) => {
+        //TODO : API call
+        //API call
+
+        const response = await fetch(`${host}/api/profiles/addprofile`,{
+            method: 'POST',
+            headers: {
+                "Content-Type": 'application/json',
+                "auth-token": localStorage.getItem('token')
+                     },
+            body: JSON.stringify({name,branch,regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2}), 
+        });
+
+       
+        const profile = await response.json();
+        setProfiles(profiles.concat(profile));
+        getProfiles(setProfiles);
+
+    }
+
+
+    //Delete a Profile
+    const deleteProfile = async(id) => {
+        //API call
+        const response = await fetch(`${host}/api/profiles/deleteprofile/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')            }
+        });
+ const json = await response.json();
+ console.log(json);
+
+
+        const newProfiles = profiles.filter((profile) => { return profile._id !== id })
+        setProfiles(newProfiles);
+
+    }
+
+
+    //Edit a Profile
+    const editProfile = async (id,name,branch,regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2) => {
+        //API call
+
+        const response = await fetch(`${host}/api/profiles/updateprofile/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')            },
+            body: JSON.stringify({name,branch,regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2})
+        });
+const json = await response.json();
+console.log(json);
+       
+
+
+        let newProfiles = JSON.parse(JSON.stringify(profiles))
+        //logic to edit in client
+        for (let index = 0; index < newProfiles.length; index++) {
+            const element = newProfiles[index];
+            if (element._id === id) {
+                newProfiles[index].name = name;
+                newProfiles[index].branch = branch;
+                newProfiles[index].regno = regno;
+                newProfiles[index].year = year;
+                newProfiles[index].email = email;
+                newProfiles[index].mobile = mobile;
+                newProfiles[index].tag = tag;
+                newProfiles[index].bio = bio;
+                newProfiles[index].resume = resume;
+                newProfiles[index].github = github;
+                newProfiles[index].linkedin = linkedin;
+                newProfiles[index].link1 = link1;
+                newProfiles[index].link2 = link2;
+                newProfiles[index].project1 = project2;
+                newProfiles[index].project2 = project2;
+                break;
+            }
+           
+        }
+        setProfiles(newProfiles);
+    }
+
+
+    return (
+
+        <ProfileContext.Provider value={{ profiles,setProfiles, addProfile, deleteProfile, editProfile,getProfiles }}>
+            {props.children}
+        </ProfileContext.Provider>
+
+    )
+}
+
+
+
+export default ProfileState;
