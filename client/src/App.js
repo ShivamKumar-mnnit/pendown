@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import Error from "./components/error";
 import {
   BrowserRouter as Router,
   Routes,Route
@@ -46,6 +47,7 @@ function App() {
     <Navbar/>
     <Alert alert={alert} />
     <Routes>
+      <Route path="*" element={<Error/>} />
     <Route element={<Body showAlert={showAlert}/> } exact path='/' ></Route>
       <Route element={<Signin showAlert={showAlert}/>} exact path='/signin' ></Route>
       <Route element={<Signup showAlert={showAlert}/>} exact path='/signup' ></Route>
@@ -56,6 +58,8 @@ function App() {
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
 
       <Route element={<Home showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
+
+    
       <Route element={<Team />} exact path='/team' ></Route>
 
       </Routes>
