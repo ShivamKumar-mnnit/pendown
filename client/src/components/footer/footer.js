@@ -44,7 +44,7 @@ const footer = () => {
             <div className="col-md-7 col-lg-8">
               <p> Copyright <i className="fa-sharp fa-regular fa-copyright"></i>2023 All rights reserved by:
               <Link to="/" className="text-decoration-none">
-                <strong className="text-warning"> BrainZo</strong>
+                <strong className="text-warning"> Pen down</strong>
               </Link> </p>
             </div>
 
