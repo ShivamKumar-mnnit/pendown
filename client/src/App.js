@@ -9,12 +9,11 @@ import Signin from "./components/signin/signin";
 import Signup from "./components/signup/signup";
 import Footer from './components/footer/footer';
 import HomeEvent from "./components/event/Home";
-import Student from "./components/profile/student";
-import Mentor from "./components/profile/mentor";
+import Mentor from "./components/profile/Home";
+import HomeNote from './components/quicknotes/Home';
 import Body from "./components/body/body";
 import Alert from './Alert';
 
-import HomeNote from './components/quicknotes/Home';
 
 import Home from './components/quicknotes/Home';
 import Team from "./components/team/team";
@@ -52,7 +51,6 @@ function App() {
       <Route element={<Signin showAlert={showAlert}/>} exact path='/signin' ></Route>
       <Route element={<Signup showAlert={showAlert}/>} exact path='/signup' ></Route>
       <Route element={<HomeEvent showAlert={showAlert}/>} exact path='/event' ></Route>
-      <Route element={<Student showAlert={showAlert}/>} exact path='/student' ></Route>
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
 
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>

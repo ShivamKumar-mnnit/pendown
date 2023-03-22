@@ -1,111 +1,172 @@
-import React from 'react'
-import profilePic from "../../img/mentor.jpg"
+import React, { useContext, useEffect, useRef,useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import profileContext from '../../Context/profiles/ProfileContext';
+import AddMentor from './AddMentor';
+import Mentoritem from './Mentoritem';
 
-const mentor = () => {
+
+const Mentor = (props) => {
+  const navigate = useNavigate();
+  const context = useContext(profileContext)
+  const { profiles, getProfiles, editProfile } = context;
+
+
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      getProfiles();
+    }
+    else{
+      navigate("/signin");;
+    }
+    // eslint-disable-next-line
+  }, [])
+
+  const ref = useRef(null);  
+  const refClose = useRef(null);  
+
+  const [profile,setProfile] = useState({id:"",ename:"", ebranch:"",eregno:"",eyear:"",eemail:"",emobile:"",etag:"",ebio:"",eresume:"",egithub:"",elinkedin:"",elink1:"",elink2:"",eproject1:"",eproject2:""});
+
+
+  const updateProfile = (currentProfile) => {
+    ref.current.click();
+    setProfile({id:currentProfile._id, ename: currentProfile.name,ebranch: currentProfile.branch,eregno: currentProfile.regno,eyear: currentProfile.year,eemail: currentProfile.email,emobile: currentProfile.mobile,etag: currentProfile.tag,ebio: currentProfile.bio,eresume: currentProfile.resume,egithub: currentProfile.github,elinkedin: currentProfile.linkedin,elink1: currentProfile.link1,elink2: currentProfile.link2,eproject1: currentProfile.project1,eproject2: currentProfile.project2});
+  }
+
+  
+  const handleClick =(e)=>{
+    editProfile(profile.id,profile.ename,profile.ebranch,profile.eregno,profile.eyear,profile.eemail,profile.emobile,profile.etag,profile.ebio,profile.eresume,profile.egithub,profile.elinkedin,profile.elink1,profile.elink2,profile.eproject1,profile.eproject2);
+    refClose.current.click();
+    props.showAlert("Updated Succesfully","success");
+
+}
+
+const onChange = (e)=>{
+    setProfile({...profile,[e.target.name]:e.target.value})
+}
+
+
+
   return (
-    <div>
-          
-    <div className='img-background-profile'>
-
-
-<div className="container emo=profile py-5 "  >
-  <form method="">
-    <div className="grid d-flex justify-content-center my-5">
-    <button type="button" className="btn btn-lg btn-warning "  disabled></button>
-      <div className="card ">
-        <div className="shadow bg-body rounded"></div>
-        <div className="row" >
-          <div className="col-md-5 ">
-            <img src={profilePic} alt="img" className="img-thumbnail" />
-            <button className='btn btn-primary my-2 mx-5 '>Edit Profile</button>
+    <>
+    {profiles.length===0 && <AddMentor  showAlert={props.showAlert}/> }
+    <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Profile
+    </button>
+    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLabel">Edit Profile</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div className="col-md-6">
-            <div className="proflie-head">
-              <p className="profile-branch mt-3 mb-1 fw-bold">Name:</p>
-              <p className="profile-branch mt-1 mb-1 fw-bold">Branch:</p>
-              <p className="profile-register mt-1 mb-1 fw-bold">Reg. No.:</p>
-              <p className="profile-year mt-1 mb-1 fw-bold" >Year:</p>
-              <p className="profile-emailid mt-1 mb-1 fw-bold"><i className="fa-solid fa-envelope"></i>Email:</p>
-              <p className="profile-mobileNumber mt-1 mb-1 fw-bold"><i className="fa-solid fa-mobile"></i>+91</p>
-              <p className="profile-year mt-1 mb-1 fw-bold" >Tag</p>
-            </div>
+          <div className="modal-body">
+            <form>
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">Name</label>
+                <input type="text" className="form-control" id="ename" name='ename' aria-describedby="emailHelp" value={profile.ename} onChange={onChange} minLength={5} required  />
+              </div>
+              
+              
+              <div className="mb-3">
+                <label htmlFor="branch" className="form-label">branch</label>
+                <input type="text" className="form-control" id="ebranch" name='ebranch' aria-describedby="emailHelp" value={profile.ebranch} onChange={onChange}  required  />
+              </div>
 
+              <div className="mb-3">
+                <label htmlFor="regno" className="form-label">Registration No.</label>
+                <input type="text" className="form-control" id="eregno" name='eregno' aria-describedby="emailHelp" value={profile.eregno} onChange={onChange} minLength={8} required placeholder="please enter your 8 digit registration number"  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="year" className="form-label">Year of passing</label>
+                <input type="text" className="form-control" id="eyear" name='eyear' aria-describedby="emailHelp" value={profile.eyear} onChange={onChange} required  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" className="form-control" id="eemail" name='eemail' aria-describedby="emailHelp" value={profile.eemail} onChange={onChange}  required  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="mobile" className="form-label">Mobile no.</label>
+                <input type="text" className="form-control" id="emobile" name='emobile' aria-describedby="emailHelp" value={profile.emobile} onChange={onChange}  required  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="tag" className="form-label">Tag</label>
+                <input type="text" className="form-control" id="etag" name='etag' aria-describedby="emailHelp" value={profile.etag} onChange={onChange}  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="bio" className="form-label">Bio</label>
+                <input type="text" className="form-control" id="ebio" name='ebio' aria-describedby="emailHelp" value={profile.ebio} onChange={onChange}   />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="resume" className="form-label">Resume</label>
+                <input type="text" className="form-control" id="eresume" name='eresume' aria-describedby="emailHelp" value={profile.eresume} onChange={onChange}  />
+              </div>
+
+              
+              <div className="mb-3">
+                <label htmlFor="github" className="form-label">Github</label>
+                <input type="text" className="form-control" id="egithub" name='egithub' aria-describedby="emailHelp" value={profile.egithub} onChange={onChange}   />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="linkedin" className="form-label">LinkedIn</label>
+                <input type="text" className="form-control" id="elinkedin" name='elinkedin' aria-describedby="emailHelp" value={profile.elinkedin} onChange={onChange}   />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="link1" className="form-label">Link1</label>
+                <input type="text" className="form-control" id="elink1" name='elink1' aria-describedby="emailHelp" value={profile.elink1} onChange={onChange}   />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="link2" className="form-label">Link2</label>
+                <input type="text" className="form-control" id="elink2" name='elink2' aria-describedby="emailHelp" value={profile.elink2} onChange={onChange}  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="project1" className="form-label">Project1</label>
+                <input type="text" className="form-control" id="eproject1" name='eproject1' aria-describedby="emailHelp" value={profile.eproject1} onChange={onChange}  />
+              </div>
+              
+              <div className="mb-3">
+                <label htmlFor="project2" className="form-label">Project2</label>
+                <input type="text" className="form-control" id="eproject2" name='eproject2' aria-describedby="emailHelp" value={profile.eproject2} onChange={onChange}   />
+              </div>
+
+
+
+
+
+
+            </form>
           </div>
-
-          <div className="card mx-5 widthcardstudent">
-<div className="card-body">
-<h5 className="card-title">Bio</h5>
-<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-</div>
-</div>
-
-
-          <div className='container mx-2 my-2'>
-            <h3>Important Links:</h3>
+          <div className="modal-footer">
+            <button ref = {refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button disabled={profile.ename.length<5 || profile.eregno.length<8} onClick={handleClick} type="button" className="btn btn-primary">Update Profile</button>
           </div>
-
-          <div className="proflie-head">
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default">Resume</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default"><i className="fa-brands fa-square-github"></i>Github</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default"><i className="fa-brands fa-linkedin"></i>Linkedin</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default">Link</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default">Link</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div> 
-          </div>
-          <div className='container mx-2 my-2'>
-            <h3>Projects Link</h3>
-          </div>
-          
-
-          <div className="proflie-head">
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default">Project 1 </span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="inputGroup-sizing-default">Project 2</span>
-              </div>
-              <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
-            </div>
-            </div>
-        </div>       
-      </div> 
-      <button type="button" className="btn btn-lg btn-warning" disabled></button>
+        </div>
+      </div>
     </div>
-  </form>  
-</div>
-</div>
-</div> 
+
+
+    <div className="row my-3">
+        <h2 className='px-5'>Your Profile</h2>
+        <div className="container mx-2 px-5">
+        {profiles.length===0 && 'No Profile to display'}
+        </div>
+        {profiles.map((profile,_id) => {
+          return <Mentoritem key={_id} updateProfile={updateProfile}  showAlert={props.showAlert} profile={profile} />
+        })}
+      </div>
+  
+  </>
     
   )
 }
 
-export default mentor
+export default Mentor

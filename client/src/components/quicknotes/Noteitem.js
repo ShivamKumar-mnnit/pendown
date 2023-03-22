@@ -32,10 +32,7 @@ const Noteitem = (props) => {
 
         </div>
         
-       
-   
-   
-   
+
    </>
   )
 }
