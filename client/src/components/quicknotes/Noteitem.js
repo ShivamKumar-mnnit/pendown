@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import noteContext from '../../Context/notes/NoteContext';
 import '../event/event.css';
-import { Link } from 'react-router-dom';
+import './note.css';
 
 const Noteitem = (props) => {
 
@@ -14,7 +14,7 @@ const Noteitem = (props) => {
   return (
    <>
     
-        <div className="col-md-6 d-flex justify-content-center">
+        <div className="col-md-6 d-flex justify-content-center ">
 
         <div className="card m-2 cbl text-center cardofevent">
   
