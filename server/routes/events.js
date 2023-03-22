@@ -22,8 +22,8 @@ router.post('/addevent', fetchuser, [
 
     body('title', 'Enter a valid title').isLength({ min: 1 }),
     body('description', 'Description must be atleast 5 characters').isLength({ min: 5 }),
-    body('organizer', 'Enter the name of organizer').isLength({ min: 1 }),
-    body('datetobeheld', 'Enter date of event').isLength({ min: 1 }),
+    body('organizer', 'Enter the name of organizer'),
+    body('datetobeheld', 'Enter date of event'),
     body('link', 'Enter the link of event').isLength({ min: 1 }),
 
 ], async (req, res) => {

@@ -13,16 +13,14 @@ const EventsSchema = new Schema({
     },
     description:{
         type :  String,
-        required: true,
     },
     
     organizer:{
         type :  String,
-        required: true,
     },
     datetobeheld:{
         type: String,
-        default : "General"
+        default : Date.now
     },
     
     link:{

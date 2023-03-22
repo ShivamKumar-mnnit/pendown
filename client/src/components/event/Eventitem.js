@@ -7,6 +7,8 @@ const Eventitem = (props) => {
     const context = useContext(eventContext);
     const {deleteEvent}=context;
       const {event, updateEvent} = props;
+
+      
   
 
   return (
@@ -18,9 +20,9 @@ const Eventitem = (props) => {
   
   <div className="card-body">
     <h2 className="card-title mb-4">{event.title}</h2>
-    <p className="card-text">{event.description}</p>
-    <p className="card-text">{event.organizer}</p>
-    <p className="card-text">{event.datetobeheld}</p>
+    <p className="card-text"><h4>Description</h4> {event.description}</p>
+    <p className="card-text">Organizer : {event.organizer}</p>
+    <p className="card-text">Date : {event.datetobeheld}</p>
     <div>
     <a href={event.link} className="card-text" target='_blank' rel='noreferrer'>{event.link}</a>
     </div>
