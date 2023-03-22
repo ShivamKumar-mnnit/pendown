@@ -39,7 +39,7 @@ const AddEvent = (props) => {
 <input type="text" className="form-control" id="datetobeheld" name='datetobeheld' value={event.datetobeheld} onChange={onChange} />
 </div><div className="mb-3">
 <label htmlFor="link" className="form-label">Link</label>
-<input type="text" className="form-control" id="link" name='link' value={event.link} onChange={onChange} />
+<input type="url" className="form-control" id="link" name='link' value={event.link} onChange={onChange} />
 </div>
 
 

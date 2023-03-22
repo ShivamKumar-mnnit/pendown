@@ -21,7 +21,9 @@ const Eventitem = (props) => {
     <p className="card-text">{event.description}</p>
     <p className="card-text">{event.organizer}</p>
     <p className="card-text">{event.datetobeheld}</p>
-    <p className="card-text">{event.link}</p>
+    <div>
+    <a href={event.link} className="card-text" target='_blank' rel='noreferrer'>{event.link}</a>
+    </div>
     <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteEvent(event._id);
     props.showAlert("Deleted Succesfully","success");
     }}></i>
