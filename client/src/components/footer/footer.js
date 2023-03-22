@@ -12,9 +12,9 @@ const footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Pen down</h5>
             <p>Your happy place !</p>
             <p><i className="fas fa-home mr-3"></i> MNNIT Allahabad, UP, India</p>
-            <p><i className="fas fa-envelope mr-3"></i> 15122002suresh@gmail.com</p>
-            <p><i className="fas fa-phone mr-3"></i> +91 8432065012</p>
+            <p><i className="fas fa-envelope mr-3"></i> 1306shivam@gmail.com</p>
             <p><i className="fas fa-phone mr-3"></i> +91 7017903175</p>
+            <p><i className="fas fa-phone mr-3"></i> +91 8432065012</p>
 
           </div>
           <div className="col-md-2 col-xl-2 mx-auto mt-3">
