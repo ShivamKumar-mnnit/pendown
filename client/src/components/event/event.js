@@ -6,7 +6,7 @@ const Event = () => {
   return (
     <div
        className="bodyevent">
-       <h1 className="title text-center py-4 titleofevent">Glass card</h1>
+       <h1 className="title text-center py-4 titleofevent">Events...</h1>
        <div className="row py-5">
         <div className="col-md-6 d-flex justify-content-center">
 
