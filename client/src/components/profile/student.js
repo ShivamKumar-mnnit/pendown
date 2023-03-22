@@ -1,7 +1,6 @@
 import React from 'react'
 import profilePic from "../../img/student.avif"
-import bgImage from "../../img/background.jpg"
-import { Link } from 'react-router-dom';
+
 
 import './student.css';
 const student = () => {

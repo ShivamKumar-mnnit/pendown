@@ -2,7 +2,7 @@ import React from 'react'
 import {Link,  useNavigate } from 'react-router-dom'
 import './body/css/style.css';
 import './body/css/clash-display.css';
-import logo from '../img/logo-3.png';
+import logo from '../img/logo1.png';
 
 import { Link as ALink} from 'react-scroll';
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-white sticky-top">
         <div className="container">
             <Link className="navbar-brand" to="/">
-                <img src={logo} width={80} alt="" />
+                <img src={logo} width={150} alt="" />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
