@@ -15,7 +15,7 @@ const Notes = (props) => {
       getNotes();
     }
     else{
-      navigate("/login");;
+      navigate("/signin");;
     }
     // eslint-disable-next-line
   }, [])
@@ -47,7 +47,7 @@ const onChange = (e)=>{
     <>
       <AddNote showAlert={props.showAlert} />
       <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Note
       </button>
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
@@ -83,8 +83,8 @@ const onChange = (e)=>{
 
 
       <div className="row my-3">
-        <h2>Your Notes</h2>
-        <div className="container mx-2">
+        <h2 className='px-5'>Your Notes</h2>
+        <div className="container mx-2 px-5">
         {notes.length===0 && 'No Notes to display'}
         </div>
         {notes.map((note,_id) => {

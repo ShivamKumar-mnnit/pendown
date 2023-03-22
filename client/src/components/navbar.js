@@ -5,7 +5,7 @@ import './body/css/clash-display.css';
 import logo from '../img/logo-3.png';
 
 import { Link as ALink} from 'react-scroll';
-const Navbar = () => {
+const Navbar = (props) => {
 
   const navigate = useNavigate();
   const handleLogout =()=>{
@@ -31,14 +31,9 @@ const Navbar = () => {
 
 
 
-                {!localStorage.getItem('token') ?
         <li className="nav-item">
-        <Link className="nav-link" to="/">Quick Notes</Link>
-        </li> :
-        <li className="nav-item">
-        <Link className="nav-link" to="/quicknote">Quick Notes</Link>
+        <Link className="nav-link" to="/quicknotes">Quick Notes</Link>
         </li>
-        }
 
 
 

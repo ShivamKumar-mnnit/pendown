@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import noteContext from '../../Context/notes/NoteContext';
+import '../event/event.css';
+import { Link } from 'react-router-dom';
 
 const Noteitem = (props) => {
 
@@ -10,22 +12,31 @@ const Noteitem = (props) => {
 
 
   return (
-    <div className='col-md-3'>
-     
-      <div className="card my-3" >
+   <>
+    
+        <div className="col-md-6 d-flex justify-content-center">
+
+        <div className="card m-2 cbl text-center cardofevent">
+  
   <div className="card-body">
-    <div className="d-flex align-item-center">
-    <h5 className="card-title">{note.title}</h5>
+    <h2 className="card-title mb-4">{note.title}</h2>
+    <p className="card-text">{note.description}</p>
     <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteNote(note._id);
     props.showAlert("Deleted Succesfully","success");
     }}></i>
-    <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateNote(note);}}></i>
-    </div>
 
-    <p className="card-text">{note.description} </p>
+<i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateNote(note);}}></i>
+
   </div>
 </div>
-    </div>
+
+        </div>
+        
+       
+   
+   
+   
+   </>
   )
 }
 
