@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import './css/style.css';
 import './css/clash-display.css';
 import logo from '../../img/logo1.png';
+import icon1 from '../../img/reading.avif';
+import icon2 from '../../img/doubt2.png';
+import icon3 from '../../img/notesicon3.png';
 
 
 const Body = () => {
@@ -46,33 +49,33 @@ const Body = () => {
                             <img src={logo} alt="" />
                         </div>
                         <div data-aos="fade-down" data-aos-delay="150" className="col-lg-5">
-                            <h1>About Pendown</h1>
-                            <p className="mt-3 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quo reiciendis ad.</p>
+                            <h1>Features of Pendown</h1>
+                            
                             <div className="d-flex pt-4 mb-3">
-                                <div className="iconbox me-4">
+                                <div className="iconbox me-4 my-1 " ><img src={icon1} alt="#" ></img>
                                     <i className="ri-mail-send-fill"></i>
                                 </div>
                                 <div>
-                                    <h5>We are Awesome</h5>
-                                    <p>Consectetur adipisicing elit. Corporis nesciunt aut temporibus!</p>
+                                    <h5>Educational Platform</h5>
+                                    <p>Exculsively helpful for Engineering Under-graduates</p>
                                 </div>
                             </div>
                             <div className="d-flex mb-3">
-                                <div className="iconbox me-4">
+                                <div className="iconbox me-4 my-4"><img src={icon2} alt="#" ></img>
                                     <i className="ri-user-5-fill"></i>
                                 </div>
                                 <div>
-                                    <h5>We are Awesome</h5>
-                                    <p>Consectetur adipisicing elit. Corporis nesciunt aut temporibus!</p>
+                                    <h5>One-to-One interaction</h5>
+                                    <p>Solve your doubts by interacting with mentors in a fully fledged-personalised manner through chats & video calls</p>
                                 </div>
                             </div>
                             <div className="d-flex">
-                                <div className="iconbox me-4">
+                                <div className="iconbox me-4 my-4"><img src={icon3} alt="#" ></img>
                                     <i className="ri-rocket-2-fill"></i>
                                 </div>
                                 <div>
-                                    <h5>We are Awesome</h5>
-                                    <p>Consectetur adipisicing elit. Corporis nesciunt aut temporibus!</p>
+                                    <h5>Donate your Notes</h5>
+                                    <p>If you believe your handfull of selective study material would be helpful for others ,then feel free to share your notes with us. we'll feature them on our platform and help you reach masses for help and support</p>
                                 </div>
                             </div>
                         </div>
@@ -86,64 +89,59 @@ const Body = () => {
                     <div className="row">
                         <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                             <div className="section-title">
-                                <h1 className="display-4 fw-semibold">Awesome Services</h1>
+                                <h1 className="display-4 fw-semibold">Our Awesome Services</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                                
                             </div>
                         </div>
                     </div>
                     <div className="row g-4 text-center">
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-pen-nib-fill"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">UX Design</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                               
+                                <h5 className="mt-4 mb-3">Maintain your Profile</h5>
+                                <p>Come join us and maintain your academic & professional profile<br></br>
+                             </p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-stack-fill"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">UI Design</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                              
+                                <h5 className="mt-4 mb-3">Mentorship</h5>
+                                <p>confused about next step towards your career, stucked in academic hotch-potch or need emotional support then talk to our mentors. further, if you want to mentor others then join us as mentor/teacher.
+
+                                </p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-ruler-2-fill"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">Logo Design</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                              
+                                <h5 className="mt-4 mb-3">Quick notes</h5>
+                                <p>Found something important to note ?<br></br>generate your quick notes on website itself for further reference with our in-built notes taking app</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-pie-chart-2-fill"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">Digital Marketing</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                               
+                                <h5 className="mt-4 mb-3">Donate Notes</h5>
+                                <p>If you believe your handfull of selective study material would be helpful for others ,<br></br>then feel free to share your notes with us. we'll feature them on our platform and help you reach masses for help and support
+</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-code-box-line"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">Machine Learning</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                            
+                                <h5 className="mt-4 mb-3">Interactive Classes</h5>
+                                <p>Teacher can schedule classes for students and students can request for personalised doubts
+                                    and get mentorship through conference video calling feature.
+                                </p>
+                                <h3 className="mt-4 mb-3">Coming Soon...</h3>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
                             <div className="service theme-shadow p-lg-5 p-4">
-                                <div className="iconbox">
-                                    <i className="ri-user-2-fill"></i>
-                                </div>
-                                <h5 className="mt-4 mb-3">UX Design</h5>
+                                
+                                <h5 className="mt-4 mb-3">Create Events</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
                             </div>
                         </div>
