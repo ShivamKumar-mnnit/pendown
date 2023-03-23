@@ -16,8 +16,8 @@ const Body = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h1 data-aos="fade-left" className="text-uppercase text-white fw-semibold display-1">Welcome to Pendown</h1>
-                            <h5 className="text-white mt-3 mb-4" data-aos="fade-right">WE ARE TEAM OF TALENTED DESIGNERS MAKING WEBSITES WITH BOOTSTRAP</h5>
+                            <h1 data-aos="fade-left" className=" text-white fw-semibold display-1">Welcome to Pendown</h1>
+                            <h5 className="text-black mt-4 mb-5 fs-4" data-aos="fade-right">Striving for excellence with each and every interaction </h5>
                             <div data-aos="fade-up" data-aos-delay="50">
                                 <Link to="#" className="btn btn-brand me-2">Get Started</Link>
                                 <Link to="#" className="btn btn-light ms-2">Our Portfolio</Link>
@@ -37,7 +37,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">About us</h1>
                                 <div className="line"></div>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe necessitatibus ipsa exercitationem rem excepturi totam molestias cumque odio, corporis aut amet doloribus, illum laudantium id minus? Repellendus explicabo inventore eos.</p>
+                                <p>We are the team Pendown - ethusiastic , energetic and visionary developers from B.Tech 2nd year (2021-25_Batch) , NIT Allahabad , Uttar Pradesh (India)  </p>
                             </div>
                         </div>
                     </div>
@@ -176,63 +176,7 @@ const Body = () => {
             </section>
 
 
-            <section id="portfolio" className="section-padding">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                            <div className="section-title">
-                                <h1 className="display-4 fw-semibold">Our Portfolio</h1>
-                                <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row g-4">
-                        <div className="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                            <div className="portfolio-item image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-1.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-1.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                            <div className="portfolio-item image-zoom mt-4">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-2.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-2.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                        </div>
-                        <div className="col-md-4" data-aos="fade-down" data-aos-delay="250">
-                            <div className="portfolio-item image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-3.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-3.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                            <div className="portfolio-item image-zoom mt-4">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-4.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-4.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                        </div>
-                        <div className="col-md-4" data-aos="fade-down" data-aos-delay="350">
-                            <div className="portfolio-item image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-5.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-5.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                            <div className="portfolio-item image-zoom mt-4">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/project-6.jpg" alt="" />
-                                </div>
-                                <Link to="./assets/images/project-6.jpg" data-fancybox="gallery" className="iconbox"><i className="ri-search-2-line"></i></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
 
 
 
