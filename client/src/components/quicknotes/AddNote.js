@@ -1,5 +1,6 @@
 import React,{ useContext, useState } from 'react'
 import noteContext from '../../Context/notes/NoteContext'
+import './note.css'
 
 function AddNote(props) {
     
@@ -20,15 +21,15 @@ function AddNote(props) {
     }
 
   return (
-  <div className="container my-3">
-  <h1>Add a Note</h1>
+  <div className="container my-3 addnote">
+  <h1 className='addnote'>Add a Note</h1>
   <form>
 <div className="mb-3">
-<label htmlFor="title" className="form-label">Title</label>
+<label htmlFor="title" className="form-label">*Title</label>
 <input type="text" className="form-control" id="title" name='title' aria-describedby="emailHelp"  value={note.title} onChange={onChange} minLength={5} required  placeholder='Please enter title of atleast 5 character long' />
 </div>
 <div className="mb-3">
-<label htmlFor="description" className="form-label">Description</label>
+<label htmlFor="description" className="form-label">*Description</label>
 <input type="text" className="form-control" id="description" name='description'  value={note.description} onChange={onChange} minLength={5} required  placeholder='Please enter description of atleast 5 character long'/>
 </div>
 <div className="mb-3">
