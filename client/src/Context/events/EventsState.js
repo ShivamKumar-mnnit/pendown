@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import EventContext from "./EventContext";
+import {BASE_URL} from "../helper"
 
 const EventState = (props) => {
-    const host = 'http://localhost:8001'
+    
 
     const eventsInitial = []
 
@@ -12,7 +13,7 @@ const EventState = (props) => {
     //Get all events
     const getEvents = async () => {
         //API call
-        const response = await fetch(`${host}/api/events/fetchallevents`, {
+        const response = await fetch(`${BASE_URL}api/events/fetchallevents`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +32,7 @@ const EventState = (props) => {
         //TODO : API call
         //API call
 
-        const response = await fetch(`${host}/api/events/addevent`,{
+        const response = await fetch(`${BASE_URL}api/events/addevent`,{
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json',
@@ -51,7 +52,7 @@ const EventState = (props) => {
     //Delete a event
     const deleteEvent = async(id) => {
         //API call
-        const response = await fetch(`${host}/api/events/deleteevent/${id}`, {
+        const response = await fetch(`${BASE_URL}api/events/deleteevent/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +72,7 @@ const EventState = (props) => {
     const editEvent = async (id, title, description,organizer,datetobeheld,link) => {
         //API call
 
-        const response = await fetch(`${host}/api/events/updateevent/${id}`, {
+        const response = await fetch(`${BASE_URL}api/events/updateevent/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
