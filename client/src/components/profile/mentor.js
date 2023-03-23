@@ -99,7 +99,8 @@ const onChange = (e)=>{
               
               <div className="mb-3">
                 <label htmlFor="bio" className="form-label">Bio</label>
-                <input type="text" className="form-control" id="ebio" name='ebio' aria-describedby="emailHelp" value={profile.ebio} onChange={onChange}   />
+                
+                <textarea name="ebio" id="ebio" cols="30" rows="10" value={profile.ebio} onChange={onChange}></textarea>
               </div>
               
               <div className="mb-3">

@@ -17,7 +17,7 @@ const Mentoritem = (props) => {
       <div className="container emo=profile py-5 "  >
         <form method="">
           <div className="grid d-flex justify-content-center my-5">
-          <button type="button" className="btn btn-lg btn-warning "  disabled></button>
+          <button type="button" className="btn btn-lg btn-success "  disabled></button>
             <div className="card ">
               <div className="shadow bg-body rounded"></div>
               <div className="row" >
@@ -37,13 +37,12 @@ const Mentoritem = (props) => {
       
                 </div>
       
-                <div className="card mx-5 widthcardstudent">
-      <div className="card-body">
-      <h5 className="card-title">Bio</h5>
-      <p className="card-text">{profile.bio}</p>
-      
-      </div>
-      </div>
+                <div class="card container  mx-5" >
+  <div class="card-body">
+    <h5 class="card-title">Bio</h5>
+    <textarea cols="40" rows="8">{profile.bio}</textarea>
+  </div>
+</div>
       
       
                 <div className='container mx-2 my-2'>
@@ -55,31 +54,31 @@ const Mentoritem = (props) => {
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default">Resume: </span>
                     </div>
-                    {profile.resume}
+                    <div className='mx-2 my-1'><a href={profile.resume} alt='...'>{profile.resume}</a></div>
                   </div>
                   <div className="input-group mb-3">
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default"><i className="fa-brands fa-square-github"></i>Github: </span>
                     </div>
-                    {profile.github}
+                    <div className='mx-2 my-1'><a href={profile.github} alt='...'>{profile.github}</a></div>
                   </div>
                   <div className="input-group mb-3">
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default"><i className="fa-brands fa-linkedin"></i>Linkedin: </span>
                     </div>
-                    {profile.linkedin}
+                    <div className='mx-2 my-1'><a href={profile.linkedin} alt='...'>{profile.linkedin}</a></div>
                   </div>
                   <div className="input-group mb-3">
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default">Link1: </span>
                     </div>
-                    {profile.link1}
+                    <div className='mx-2 my-1'><a href={profile.link1} alt='...'>{profile.link1}</a></div>
                   </div>
                   <div className="input-group mb-3">
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default">Link2: </span>
                     </div>
-                    {profile.link2}
+                    <div className='mx-2 my-1'><a href={profile.link2} alt='...'>{profile.link2}</a></div>
                   </div> 
                 </div>
                 <div className='container mx-2 my-2'>
@@ -92,13 +91,13 @@ const Mentoritem = (props) => {
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default">Project 1:  </span>
                     </div>
-                    {profile.project1}
+                    <div className='mx-2 my-1'><a href={profile.project1} alt='...'>{profile.project1}</a></div>
                   </div>
                   <div className="input-group mb-3">
                     <div className="input-group-prepend">
                       <span className="input-group-text" id="inputGroup-sizing-default">Project 2: </span>
                     </div>
-                    {profile.project2}
+                    <div className='mx-2 my-1'><a href={profile.project2} alt='...'>{profile.project2}</a></div>
                   </div>
                   <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteProfile(profile._id);
     props.showAlert("Deleted Succesfully","success");
@@ -107,7 +106,7 @@ const Mentoritem = (props) => {
                   </div>
               </div>       
             </div> 
-            <button type="button" className="btn btn-lg btn-warning" disabled></button>
+            <button type="button" className="btn btn-lg btn-success" disabled></button>
           </div>
         </form>  
       </div>

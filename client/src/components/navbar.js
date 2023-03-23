@@ -3,6 +3,7 @@ import {Link,  useNavigate } from 'react-router-dom'
 import './body/css/style.css';
 import './body/css/clash-display.css';
 import logo from '../img/logo1.png';
+import './navbar.css';
 
 import { Link as ALink} from 'react-scroll';
 const Navbar = () => {
