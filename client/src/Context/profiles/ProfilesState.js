@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ProfileContext from "./ProfileContext";
+import {BASE_URL} from "../helper"
 
 const ProfileState = (props) => {
-    const host = 'http://localhost:8001'
 
     const profilesInitial = []
 
@@ -12,7 +12,7 @@ const ProfileState = (props) => {
     //Get all profiles
     const getProfiles = async () => {
         //API call
-        const response = await fetch(`${host}/api/profiles/fetchprofile`, {
+        const response = await fetch(`${BASE_URL}api/profiles/fetchprofile`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const ProfileState = (props) => {
         //TODO : API call
         //API call
 
-        const response = await fetch(`${host}/api/profiles/addprofile`,{
+        const response = await fetch(`${BASE_URL}api/profiles/addprofile`,{
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json',
@@ -51,7 +51,7 @@ const ProfileState = (props) => {
     //Delete a Profile
     const deleteProfile = async(id) => {
         //API call
-        const response = await fetch(`${host}/api/profiles/deleteprofile/${id}`, {
+        const response = await fetch(`${BASE_URL}api/profiles/deleteprofile/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const ProfileState = (props) => {
     const editProfile = async (id,name,branch,regno,year,email,mobile,tag,bio,resume,github,linkedin,link1,link2,project1,project2) => {
         //API call
 
-        const response = await fetch(`${host}/api/profiles/updateprofile/${id}`, {
+        const response = await fetch(`${BASE_URL}api/profiles/updateprofile/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

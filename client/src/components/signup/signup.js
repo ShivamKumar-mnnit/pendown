@@ -3,6 +3,8 @@ import {useNavigate} from 'react-router-dom';
 
 import {Link} from 'react-router-dom';
 
+import {BASE_URL} from "../helper"
+
 
 const Signup = (props) => {
   
@@ -14,7 +16,7 @@ const Signup = (props) => {
     const handleSubmit = async(e)=>{
         e.preventDefault();
         const {name,email,password}=credentials;
-        const response = await fetch("http://localhost:8001/api/auth/createuser",{
+        const response = await fetch(`${BASE_URL}api/auth/createuser`,{
         method : 'POST',
         headers: {
             'Content-Type': 'application/json'
