@@ -93,7 +93,7 @@ const onChange = (e)=>{
 
 
       <div className="row my-3">
-        <h2 className='px-5'>Your Events</h2>
+        <h2 className='px-5 cardtext'>Your Events</h2>
         <div className="container mx-2 px-5">
         {events.length===0 && 'No Events to display'}
         </div>

@@ -54,3 +54,14 @@
   .btnofevent:hover {
     box-shadow: 0 0.3rem rgba(0, 0, 0, 0.3);
   }
+
+  .bgevent{
+    background-image: linear-gradient(black,blue);
+  }
+
+.cardtext{
+  color: white;
+}
+.cardlink{
+  color:rgb(120, 247, 120);
+}
