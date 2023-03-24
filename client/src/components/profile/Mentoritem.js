@@ -39,7 +39,11 @@ const Mentoritem = (props) => {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <input type="submit" className="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteProfile(profile._id);
+    props.showAlert("Deleted Succesfully","success");
+    }}></i>
+    <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateProfile(profile);}}></i>
+
                     </div>
                 </div>
                 <div className="row">
@@ -98,13 +102,15 @@ const Mentoritem = (props) => {
                                                 <label>Bio</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <textarea cols="30" rows="10" className='areabordernone'>{profile.bio}</textarea>
+                                                <textarea cols="25" rows="10" className='areabordernone'>{profile.bio}</textarea>
                                             </div>
                                         </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                
             </form>           
         </div>
     

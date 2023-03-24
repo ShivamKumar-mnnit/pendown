@@ -164,7 +164,85 @@ const onChange = (e)=>{
           return <Mentoritem key={_id} updateProfile={updateProfile}  showAlert={props.showAlert} profile={profile} />
         })}
       </div>
+
+      <section id="reviews" className="section-padding bg-light">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                            <div className="section-title">
+                                <h1 className="display-4 fw-semibold">Profile Building</h1>
+                                <div className="line"></div>
+                                <p>Let's go step by step and build your profile.</p>                           
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row gy-5 gx-4">
+                        <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                            <div className="review">
+                                <div className="review-head p-4 bg-white theme-shadow">
+                                    <div className="text-warning">
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                    </div>
+                                    <p>Get easy access to all your links</p>
+                                </div>
+                                <div className="review-person mt-4 d-flex align-items-center">
+                                    <img className="rounded-circle" src="./assets/images/avatar-1.jpg" alt="" />
+                                    <div className="ms-3">
+                                        <h5>Upload your Links Now!!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                            <div className="review">
+                                <div className="review-head p-4 bg-white theme-shadow">
+                                    <div className="text-warning">
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                    </div>
+                                    <p>Maintain all your data at one place.</p>
+                                </div>
+                                <div className="review-person mt-4 d-flex align-items-center">
+                                    <img className="rounded-circle" src="./assets/images/avatar-2.jpg" alt="" />
+                                    <div className="ms-3">
+                                        <h5>Let's edit your profile</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                            <div className="review">
+                                <div className="review-head p-4 bg-white theme-shadow">
+                                    <div className="text-warning">
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                        <i className="ri-star-fill"></i>
+                                    </div>
+                                    <p>Tell your peers about yourself</p>
+                                </div>
+                                <div className="review-person mt-4 d-flex align-items-center">
+                                    <img className="rounded-circle" src="./assets/images/avatar-3.jpg" alt="" />
+                                    <div className="ms-3">
+                                        <h5>Update your Bio Now!</h5>
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
   
+                        </div>
+                    </div>
+            </section>        
   </>
     
   )
