@@ -16,27 +16,24 @@ const Mentoritem = (props) => {
                     <div className="col-md-4">
                         <div className="profile-img">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                            <div className="file btn btn-lg btn-primary">
-                                Change Photo
-                                <input type="file" name="file"/>
-                            </div>
+                           
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="profile-head">
                                     <h5>
-                                        Garv
+                                        {profile.name}
                                     </h5>
                                     <h6>
-                                        Sophomore
+                                        {profile.tag}
                                     </h6>
-                                    <p className="proile-rating">Branch : <span>EE</span></p>
+                                    <p className="proile-rating">Branch : <span>{profile.branch}</span></p>
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li className="nav-item">
                                     <Link className="nav-link active" id="home-tab" data-toggle="tab" to="/profile" role="tab" aria-controls="home" aria-selected="true">About</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" id="profile-tab" data-toggle="tab" to="/event" role="tab" aria-controls="profile" aria-selected="false">Timeline</Link>
+                                    <Link className="nav-link" id="profile-tab" data-toggle="tab" to="/event" role="tab" aria-controls="profile" aria-selected="false">Events</Link>
                                 </li>
                             </ul>
                         </div>
@@ -49,15 +46,15 @@ const Mentoritem = (props) => {
                     <div className="col-md-4">
                         <div className="profile-work">
                             <p>LINKS</p>                            
-                            <Link to="">LinkedIn</Link><br/>
-                            <Link to="">GitHub</Link><br/>
-                            <Link to="">Resume</Link><br/>
+                            <Link to={profile.linkedin}><i class="fa-brands fa-linkedin"></i> LinkedIn</Link><br/>
+                            <Link to={profile.github}><i class="fa-brands fa-github"></i> GitHub</Link><br/>
+                            <Link to={profile.resume}>Resume</Link><br/>
 
                             <p>SKILLS</p>
-                            <Link to="">Project 1</Link><br/>
-                            <Link to="">Project 2</Link><br/>
-                            <Link to="">Link 1</Link><br/>
-                            <Link to="">Link 2</Link>
+                            <Link to={profile.Project1}><i class="fa-solid fa-link"></i> Project 1</Link><br/>
+                            <Link to={profile.project2}><i class="fa-solid fa-link"></i> Project 2</Link><br/>
+                            <Link to={profile.link1}><i class="fa-solid fa-link"></i> Link 1</Link><br/>
+                            <Link to={profile.link2}><i class="fa-solid fa-link"></i> Link 2</Link>
                         </div>
                     </div>
                     <div className="col-md-8">
@@ -68,7 +65,7 @@ const Mentoritem = (props) => {
                                                 <label>Reg. No.</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>20221202</p>
+                                                <p>{profile.regno}</p>
                                             </div>
                                         </div>
                                         <div className="row">
@@ -76,7 +73,7 @@ const Mentoritem = (props) => {
                                                 <label>Passing Year</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>2025</p>
+                                                <p>{profile.year}</p>
                                             </div>
                                         </div>
                                         <div className="row">
@@ -84,7 +81,7 @@ const Mentoritem = (props) => {
                                                 <label>Email</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p>{profile.email}</p>
                                             </div>
                                         </div>
                                         <div className="row">
@@ -92,7 +89,7 @@ const Mentoritem = (props) => {
                                                 <label>Mobile</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>+91 9999999999</p>
+                                                <p>+91 {profile.mobile}</p>
                                             </div>
                                         </div>
                   
@@ -101,7 +98,7 @@ const Mentoritem = (props) => {
                                                 <label>Bio</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <p>Web Developer and Designer</p>
+                                                <textarea cols="30" rows="10" className='areabordernone'>{profile.bio}</textarea>
                                             </div>
                                         </div>
                             </div>

@@ -7,7 +7,7 @@ import icon1 from '../../img/reading.avif';
 import icon2 from '../../img/doubt2.png';
 import icon3 from '../../img/notesicon3.png';
 
-import emailjs, { send } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 
 const Body = () => {

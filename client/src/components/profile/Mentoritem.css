@@ -93,3 +93,10 @@ body{
     font-weight: 600;
     color: #0062cc;
 }
+.profile-tab textarea{
+    color:#0062cc;
+   
+}
+.areabordernone{
+    border: none;
+}
