@@ -1,5 +1,6 @@
 import React,{ useContext, useState } from 'react'
 import eventContext from '../../Context/events/EventContext';
+import './event.css';
 
 const AddEvent = (props) => {
     const context = useContext(eventContext);
@@ -20,7 +21,7 @@ const AddEvent = (props) => {
 
   return (
     <div className="container my-3">
-  <h1>Add an Event</h1>
+  <h1 className='cardtext'>Add an Event</h1>
   <form>
 <div className="mb-3">
 <label htmlFor="title" className="form-label">*Title </label>

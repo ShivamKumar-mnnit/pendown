@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './css/style.css';
 import './css/clash-display.css';
@@ -7,10 +7,23 @@ import icon1 from '../../img/reading.avif';
 import icon2 from '../../img/doubt2.png';
 import icon3 from '../../img/notesicon3.png';
 
+import emailjs, { send } from '@emailjs/browser';
+
 
 const Body = () => {
 
+    const form = useRef();
 
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_3ibnx5m', 'template_7p7532i', form.current, 'zozF20U2SZWw5Z47D')
+        .then((result) => {
+            console.log('Message send');
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
 
     return (
         <>
@@ -393,32 +406,22 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 text-white fw-semibold">Get in touch</h1>
                                 <div className="line bg-white"></div>
-                                <p className="text-white">We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                                <p className="text-white">We love to craft digital experiences for brands rather than crap and do crazy skills. We will be happy to help you, Feel free to contact us.</p>
                             </div>
                         </div>
                     </div>
                     <div className="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
                         <div className="col-lg-8">
-                            <form action="#" className="row g-3 p-lg-5 p-4 bg-white theme-shadow">
-                                <div className="form-group col-lg-6">
-                                    <input type="text" className="form-control" placeholder="Enter first name" />
-                                </div>
-                                <div className="form-group col-lg-6">
-                                    <input type="text" className="form-control" placeholder="Enter last name" />
-                                </div>
-                                <div className="form-group col-lg-12">
-                                    <input type="email" className="form-control" placeholder="Enter Email address" />
-                                </div>
-                                <div className="form-group col-lg-12">
-                                    <input type="text" className="form-control" placeholder="Enter subject" />
-                                </div>
-                                <div className="form-group col-lg-12">
-                                    <textarea name="message" rows="5" className="form-control" placeholder="Enter Message"></textarea>
-                                </div>
-                                <div className="form-group col-lg-12 d-grid">
-                                    <button className="btn btn-brand">Send Message</button>
-                                </div>
-                            </form>
+                        <form ref={form} onSubmit={sendEmail} className="row g-3 p-lg-5 p-4 bg-white theme-shadow ">
+                            
+      <label>Name</label>
+      <input type="text" name="user_name" required />
+      <label>Email</label>
+      <input type="email" name="user_email" required/>
+      <label>Message</label>
+      <textarea name="message" required/>
+      <button type="submit" value="Send" className='btn btn-warning'>Send</button>
+    </form>
                         </div>
                     </div>
                 </div>
