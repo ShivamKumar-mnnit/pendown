@@ -155,7 +155,7 @@ const onChange = (e)=>{
     </div>
 
 
-    <div className="row my-3">
+    <div className="container row my-3">
         <h2 className='px-5'>Your Profile</h2>
         <div className="container mx-2 px-5">
         {profiles.length===0 && 'No Profile to display'}
