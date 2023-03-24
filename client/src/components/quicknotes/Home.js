@@ -5,7 +5,7 @@ import './note.css'
 const Home = (props) => {
   const {showAlert} = props;
   return (
-  <div className='notebackground'>
+  <div className='notebackground' id='quicknote'>
         
     <Notes showAlert={showAlert}/>
 
