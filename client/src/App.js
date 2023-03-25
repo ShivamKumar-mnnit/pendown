@@ -16,7 +16,6 @@ import Body from "./components/body/body";
 import Alert from './Alert';
 
 
-
 import Team from "./components/team/team";
 
 
@@ -54,7 +53,6 @@ function App() {
       <Route element={<HomeEvent showAlert={showAlert}/>} exact path='allevent/addevent' ></Route>
       <Route element={<HomedisplayEvent showAlert={showAlert}/>} exact path='/allevent' ></Route>
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
-
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
 
 
