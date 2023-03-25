@@ -87,7 +87,7 @@ const onChange = (e)=>{
         <div className="container mx-2 px-5">
         {notes.length===0 && 'No Notes to display'}
         </div>
-        {notes.map((note,_id) => {
+        {notes.sort((a,b) => new Date(b.date) - new Date(a.date)).map((note,_id) => {
           return <Noteitem key={_id} updateNote={updateNote}  showAlert={props.showAlert} note={note} />
         })}
       </div>

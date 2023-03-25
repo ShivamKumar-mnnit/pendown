@@ -344,7 +344,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">Team Members</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                                <p>We love to craft digital experiances for brands rather than crap and and do crazy skills</p>
                             </div>
                         </div>
                     </div>
@@ -354,10 +354,11 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/person-1.jpg" alt="" />
                                 </div>
-                                <div className="team-member-content">
-                                    <h4 className="text-white">Jon Doe</h4>
-                                    <p className="mb-0 text-white">Webflow Artist</p>
+                                <Link to='/team'><div className="team-member-content">
+                                    <h4 className="text-white">Shivam Kumar</h4>
+                                    <p className="mb-0 text-white">Full stack Developer</p>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-4 my-5 py-5" data-aos="fade-down" data-aos-delay="250">
@@ -365,10 +366,11 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/person-2.jpg" alt="" />
                                 </div>
-                                <div className="team-member-content">
-                                    <h4 className="text-white">Jon Doe2</h4>
-                                    <p className="mb-0 text-white">Webflow Artist</p>
+                                <Link to='/team'> <div className="team-member-content">
+                                    <h4 className="text-white">Garv Petwal</h4>
+                                    <p className="mb-0 text-white">Frontend designer</p>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-4 my-5 py-5" data-aos="fade-down" data-aos-delay="350">
@@ -376,10 +378,12 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/person-3.jpg" alt="" />
                                 </div>
+                                <Link to='/team'>
                                 <div className="team-member-content">
-                                    <h4 className="text-white">Jon Doe</h4>
-                                    <p className="mb-0 text-white">Webflow Artist</p>
+                                    <h4 className="text-white">Ayush Kumar</h4>
+                                    <p className="mb-0 text-white">Frontend and UI</p>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                         
@@ -388,10 +392,12 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/person-3.jpg" alt="" />
                                 </div>
+                                <Link to='/team'>
                                 <div className="team-member-content">
-                                    <h4 className="text-white">Jon Doe</h4>
-                                    <p className="mb-0 text-white">Webflow Artist</p>
+                                    <h4 className="text-white">Suresh Barkeshiya</h4>
+                                    <p className="mb-0 text-white">Frontend designer</p>
                                 </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

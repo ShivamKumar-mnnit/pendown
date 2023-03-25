@@ -25,7 +25,7 @@ const Event = (props) => {
   const refClose = useRef(null);  
 
   const [event,setEvent] = useState({id:"",etitle:"", edescription:"",eorganizer:"",edatetobeheld:"",elink:""});
-
+const [searchTerm, setsearchTerm] = useState("");
 
 
 
@@ -49,6 +49,14 @@ const onChange = (e)=>{
 
   return (
     <>
+
+<form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{
+          setsearchTerm(e.target.value);
+        }} />
+      </form>
+
+
      <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Event
       </button>
@@ -102,9 +110,28 @@ const onChange = (e)=>{
         <div className="container mx-2 px-5">
         {events.length===0 && 'No Events to display'}
         </div>
-        {events.sort((a,b) => new Date(b.date) - new Date(a.date)).map((event,_id) => {
+
+
+
+
+{
+        events
+        .filter((val)=> {
+          if(searchTerm === ""){
+            return val;
+          }
+          else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+              return val;
+          }
+          return null;
+        })
+      
+        .sort((a,b) => new Date(b.date) - new Date(a.date)).map((event,_id) => {
           return <Eventitem key={_id} updateEvent={updateEvent}  showAlert={props.showAlert} event={event} />
-        })}
+        })
+}
+
+
       </div>
 
     </>
