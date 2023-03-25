@@ -15,13 +15,13 @@ import HomeNote from './components/quicknotes/Home';
 import Body from "./components/body/body";
 import Alert from './Alert';
 
-
 import Team from "./components/team/team";
 
 
 import NoteState from './Context/notes/NotesState';
 import ProfileState from './Context/profiles/ProfilesState';
 import EventState from "./Context/events/EventsState";
+
 function App() {
 
   const [alert,setAlert]=useState(null);
