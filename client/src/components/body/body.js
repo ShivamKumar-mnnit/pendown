@@ -97,7 +97,7 @@ const Body = () => {
             </section>
 
 
-            <section id="services" className="section-padding border-top">
+            <section id="services" className="section-padding border-top backgroundwhite">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
@@ -194,7 +194,7 @@ const Body = () => {
 
 
             {/*review*/}
-            <section id="reviews" className="section-padding bg-light">
+            <section id="reviews" className="section-padding bg-light ">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
@@ -337,7 +337,7 @@ const Body = () => {
             </section>
 
             {/*<!-- TEAM -->*/}
-            <section id="team" className="section-padding">
+            <section id="team" className="section-padding backgroundwhite">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">

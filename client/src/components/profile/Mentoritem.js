@@ -103,7 +103,7 @@ const Mentoritem = (props) => {
                                             </div>
                                             <div className="col-md-6">
 
-                                                <textarea cols="25" rows="10" className='areabordernone'>{profile.bio}</textarea>
+                                                <textarea disabled cols="25" rows="10" className='areabordernone'>{profile.bio}</textarea>
 
                                             </div>
                                         </div>

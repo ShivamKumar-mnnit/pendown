@@ -9,13 +9,14 @@ import Signin from "./components/signin/signin";
 import Signup from "./components/signup/signup";
 import Footer from './components/footer/footer';
 import HomeEvent from "./components/event/Home";
+import HomedisplayEvent from './components/displayevents/Home';
 import Mentor from "./components/profile/Home";
 import HomeNote from './components/quicknotes/Home';
 import Body from "./components/body/body";
 import Alert from './Alert';
 
 
-import Home from './components/quicknotes/Home';
+
 import Team from "./components/team/team";
 
 
@@ -50,12 +51,12 @@ function App() {
     <Route element={<Body showAlert={showAlert}/> } exact path='/' ></Route>
       <Route element={<Signin showAlert={showAlert}/>} exact path='/signin' ></Route>
       <Route element={<Signup showAlert={showAlert}/>} exact path='/signup' ></Route>
-      <Route element={<HomeEvent showAlert={showAlert}/>} exact path='/event' ></Route>
+      <Route element={<HomeEvent showAlert={showAlert}/>} exact path='allevent/addevent' ></Route>
+      <Route element={<HomedisplayEvent showAlert={showAlert}/>} exact path='/allevent' ></Route>
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
 
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
 
-      <Route element={<Home showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
 
     
       <Route element={<Team />} exact path='/team' ></Route>

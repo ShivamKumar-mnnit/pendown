@@ -5,10 +5,22 @@ const Event = require('../models/Events');
 const { body, validationResult } = require('express-validator');
 
 
-//Route1 : get all the events using : GET "/api/events/fetchallevents"  login required
+//Route1.1 : get all the events of one user using : GET "/api/events/fetchallevents"  login required
 router.get('/fetchallevents', fetchuser, async (req, res) => {
     try {
         const events = await Event.find({ user: req.user.id })
+        res.json(events);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
+
+
+//Route1.2 : get all the events  using : GET "/api/events/displayallevents"  login required
+router.get('/displayallevents', fetchuser, async (req, res) => {
+    try {
+        const events = await Event.find()
         res.json(events);
     } catch (error) {
         console.error(error.message);

@@ -1,22 +1,19 @@
 import React, { useContext, useEffect, useRef,useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import eventContext from '../../Context/events/EventContext';
-import AddEvent from './AddEvent';
-import Eventitem from './Eventitem';
+import Eventitem from '../event/Eventitem';
 
-import './event.css';
+import '../event/event.css';
 
 const Event = (props) => {
 
   const navigate = useNavigate();
   const context = useContext(eventContext)
-  const { events, getEvents, editEvent } = context;
-
- 
+  const { events, displayEvents, editEvent } = context;
 
   useEffect(() => {
     if(localStorage.getItem('token')){
-      getEvents();
+      displayEvents();
     }
     else{
       navigate("/signin");;
@@ -30,11 +27,13 @@ const Event = (props) => {
   const [event,setEvent] = useState({id:"",etitle:"", edescription:"",eorganizer:"",edatetobeheld:"",elink:""});
 
 
+
+
+
   const updateEvent = (currentEvent) => {
     ref.current.click();
     setEvent({id:currentEvent._id, etitle: currentEvent.title, edescription: currentEvent.description , eorganizer : currentEvent.organizer,edatetobeheld : currentEvent.datetobeheld,elink : currentEvent.link});
   }
-
 
   
   const handleClick =(e)=>{
@@ -50,7 +49,6 @@ const onChange = (e)=>{
 
   return (
     <>
-     <AddEvent showAlert={props.showAlert} />
      <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Event
       </button>
@@ -96,7 +94,11 @@ const onChange = (e)=>{
 
 
       <div className="row my-3">
-        <h2 className='px-5 cardtext'>Your Events and Meets</h2>
+        <div className='d-flex'>
+        <h2 className='px-5 cardtext'>All Events and Meets </h2>
+        <Link to="addevent"><button className="btn btn-outline-warning ">add your event</button></Link>
+        </div>
+        <p className='px-5 cardtext'>Only the organizer can edit or delete an event here</p>
         <div className="container mx-2 px-5">
         {events.length===0 && 'No Events to display'}
         </div>
@@ -104,6 +106,7 @@ const onChange = (e)=>{
           return <Eventitem key={_id} updateEvent={updateEvent}  showAlert={props.showAlert} event={event} />
         })}
       </div>
+
     </>
   )
 }

@@ -10,7 +10,7 @@ const EventState = (props) => {
     const [events, setEvents] = useState(eventsInitial);
 
 
-    //Get all events
+    //Get all events for single user
     const getEvents = async () => {
         //API call
         const response = await fetch(`${BASE_URL}api/events/fetchallevents`, {
@@ -25,6 +25,20 @@ const EventState = (props) => {
 
        }
 
+    //Get all events 
+    const displayEvents = async () => {
+        //API call
+        const response = await fetch(`${BASE_URL}api/events/displayallevents`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')            },
+        });
+
+        const json = await response.json();
+        setEvents(json);
+
+       }
 
 
     //Add a event
@@ -104,7 +118,7 @@ console.log(json);
 
     return (
 
-        <EventContext.Provider value={{ events,setEvents, addEvent, deleteEvent, editEvent,getEvents }}>
+        <EventContext.Provider value={{ events,setEvents, addEvent, deleteEvent, editEvent,getEvents,displayEvents }}>
             {props.children}
         </EventContext.Provider>
 

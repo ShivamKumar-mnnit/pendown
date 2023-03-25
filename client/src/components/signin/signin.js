@@ -24,9 +24,8 @@ const Signin = (props) => {
            body: JSON.stringify({email:credentials.email,password:credentials.password})
        })
        const json = await response.json();
-       console.log(json);
        
-           //save the auth token and redirect
+             //save the auth token and redirect
            if(json.success){
            localStorage.setItem('token',json.authtoken);
            navigate("/");

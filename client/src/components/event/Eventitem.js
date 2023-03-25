@@ -22,7 +22,7 @@ const Eventitem = (props) => {
     <h2 className="card-title mb-4 cardtext">{event.title}</h2>
     <p className="card-text cardtext">Description : {event.description}</p>
     <p className="card-text cardtext">Organizer : {event.organizer}</p>
-    <p className="card-text cardtext">Date : {event.datetobeheld}</p>
+    <p className="card-text cardtext">Date/Time : {event.datetobeheld}</p>
     <div>
     <a href={event.link} className="card-text cardlink" target='_blank' rel='noreferrer'>{event.link}</a>
     </div>

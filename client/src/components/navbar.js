@@ -31,7 +31,7 @@ const Navbar = () => {
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars"></i>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
@@ -68,7 +68,7 @@ const Navbar = () => {
         </form> :
         <form className="d-flex" role="search">
             
-        <Link to='/event'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Events</button></Link>
+        <Link to='/allevent'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Events</button></Link>
         <Link to='/profile'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Your Profile</button></Link>
         <button className="btn btn-outline-warning mx-1" onClick={handleLogout}  type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Logout</button>
       </form>}

@@ -21,7 +21,7 @@ const AddEvent = (props) => {
 
   return (
     <div className="container my-3">
-  <h1 className='cardtext'>Add an Event</h1>
+  <h1 className='cardtext'>Add an Event or Meet</h1>
   <form>
 <div className="mb-3">
 <label htmlFor="title" className="form-label">*Title </label>
