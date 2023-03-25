@@ -50,8 +50,8 @@ const onChange = (e)=>{
   return (
     <>
 
-<form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{
+<form className="d-flex" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{
           setsearchTerm(e.target.value);
         }} />
       </form>

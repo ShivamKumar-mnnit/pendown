@@ -50,15 +50,15 @@ const Mentoritem = (props) => {
                     <div className="col-md-4">
                         <div className="profile-work">
                             <p>LINKS</p>                            
-                            <Link to={profile.linkedin}><i class="fa-brands fa-linkedin"></i> LinkedIn</Link><br/>
-                            <Link to={profile.github}><i class="fa-brands fa-github"></i> GitHub</Link><br/>
+                            <Link to={profile.linkedin}><i className="fa-brands fa-linkedin"></i> LinkedIn</Link><br/>
+                            <Link to={profile.github}><i className="fa-brands fa-github"></i> GitHub</Link><br/>
                             <Link to={profile.resume}>Resume</Link><br/>
 
                             <p>SKILLS</p>
-                            <Link to={profile.Project1}><i class="fa-solid fa-link"></i> Project 1</Link><br/>
-                            <Link to={profile.project2}><i class="fa-solid fa-link"></i> Project 2</Link><br/>
-                            <Link to={profile.link1}><i class="fa-solid fa-link"></i> Link 1</Link><br/>
-                            <Link to={profile.link2}><i class="fa-solid fa-link"></i> Link 2</Link>
+                            <Link to={profile.Project1}><i className="fa-solid fa-link"></i> Project 1</Link><br/>
+                            <Link to={profile.project2}><i className="fa-solid fa-link"></i> Project 2</Link><br/>
+                            <Link to={profile.link1}><i className="fa-solid fa-link"></i> Link 1</Link><br/>
+                            <Link to={profile.link2}><i className="fa-solid fa-link"></i> Link 2</Link>
                         </div>
                     </div>
                     <div className="col-md-8">
@@ -103,7 +103,7 @@ const Mentoritem = (props) => {
                                             </div>
                                             <div className="col-md-6">
 
-                                                <textarea disabled cols="25" rows="10" className='areabordernone'>{profile.bio}</textarea>
+                                                <textarea disabled cols="25" rows="10" className='areabordernone' value={profile.bio}/>
 
                                             </div>
                                         </div>
