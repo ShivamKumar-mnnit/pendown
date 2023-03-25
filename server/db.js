@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb+srv://mickey:shopzohack36@shopzo.s0cahed.mongodb.net/shopzo";
+const DATABASE = process.env.DATABASE;
+const mongoURI = `${DATABASE}`;
 
 mongoose.set('strictQuery', false);
 

@@ -7,7 +7,7 @@ var jwt = require('jsonwebtoken');
 var fetchuser = require('../middleware/fetchuser');
 
 //encryption
-const JWT_SECRET = 'shivamisgoodb$oy';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 //1.creating an user using : POST '/api/auth'  auth doesnot requires
 router.post('/createuser',[

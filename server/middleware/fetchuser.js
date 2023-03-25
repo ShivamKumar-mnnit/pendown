@@ -1,6 +1,6 @@
 //used to create middle wares for authentication at different places
 var jwt = require('jsonwebtoken');
-const JWT_SECRET = 'shivamisgoodb$oy';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const fetchuser = (req,res,next)=>{
     //Get the user from the jwt token and add id to req object

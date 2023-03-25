@@ -1,10 +1,11 @@
+require("dotenv").config();
 const connectToMongo = require('./db');
 const express = require('express');
 var cors = require('cors')
 connectToMongo();
 
 const app = express();
-const port = 8001;
+const PORT = process.env.PORT || 8001
 
 
 app.use(cors());
@@ -20,8 +21,8 @@ app.get('/',(req,res)=>{
     res.send("Hello world");
 })
 
-app.listen(port, ()=>{
-    console.log(`Server is runninng on port ${port}`);
+app.listen(PORT, ()=>{
+    console.log(`Server is runninng on port ${PORT}`);
 
 })
 
