@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./social.css";
 import profileContext from "../../Context/profiles/ProfileContext";
 
@@ -7,16 +7,17 @@ const Socialitem = (props) => {
   const context = useContext(profileContext);
   const { likeProfile, unlikeProfile } = context;
 
-  const [isLiked, setIsLiked] = useState(profile.isLiked || false);
 
   const handleLikeClick = () => {
-    if (!isLiked) {
+    
       likeProfile(profile._id);
-      setIsLiked(true);
-    } else {
+    
+    
+  };
+  const handleUnLikeClick = () => {
+  
       unlikeProfile(profile._id);
-      setIsLiked(false);
-    }
+   
   };
 
   return (
@@ -45,9 +46,9 @@ const Socialitem = (props) => {
               <div className="follow">
                 <span>Social</span>
                 <span>
-                  <i className="fa-brands fa-linkedin mx-1"></i>
-                  <i className="fa-brands fa-github mx-1"></i>
-                  <i className="fa-brands fa-instagram mx-1"></i>
+                  <a href={profile.linkedin} alt="..."><i className="fa-brands fa-linkedin mx-1"></i></a>
+                  <a href={profile.github} alt="..."><i className="fa-brands fa-github mx-1"></i></a>
+                  <a href={profile.link1} alt="..."><i className="fa-brands fa-instagram mx-1"></i></a>
                 </span>
               </div>
 
@@ -66,12 +67,21 @@ const Socialitem = (props) => {
             </div>
             <hr />
           </div>
-          <span onClick={handleLikeClick}>
-            <i
-              className={isLiked ? "fa-solid fa-heart" : "fa-regular fa-heart"}
-            ></i>
-            {profile.likes ? profile.likes.length:0}
+          <span >
+            <div onClick={handleLikeClick}>
+            <i 
+              className="fa-solid fa-heart"
+            ></i>like
+            </div>
+            <div onClick={handleUnLikeClick}>
+             <i 
+              className="fa-regular fa-heart"
+            ></i>Unlike
+            </div>
+            likes : {profile.likes ? profile.likes.length:'some error occured please refresh the page'}
           </span>
+         
+          
         </div>
       </div>
     </>
