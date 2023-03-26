@@ -52,13 +52,13 @@ const Mentoritem = (props) => {
                             <p>LINKS</p>                            
                             <Link to={profile.linkedin}><i className="fa-brands fa-linkedin"></i> LinkedIn</Link><br/>
                             <Link to={profile.github}><i className="fa-brands fa-github"></i> GitHub</Link><br/>
+                            <Link to={profile.link1}><i className="fa-brands fa-instagram"></i> Instagram</Link><br/>
                             <Link to={profile.resume}>Resume</Link><br/>
 
                             <p>SKILLS</p>
                             <Link to={profile.Project1}><i className="fa-solid fa-link"></i> Project 1</Link><br/>
                             <Link to={profile.project2}><i className="fa-solid fa-link"></i> Project 2</Link><br/>
-                            <Link to={profile.link1}><i className="fa-solid fa-link"></i> Link 1</Link><br/>
-                            <Link to={profile.link2}><i className="fa-solid fa-link"></i> Link 2</Link>
+                            <Link to={profile.link2}><i className="fa-solid fa-link"></i> Link 1</Link>
                         </div>
                     </div>
                     <div className="col-md-8">

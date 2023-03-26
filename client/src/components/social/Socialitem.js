@@ -57,10 +57,10 @@ const Socialitem = (props) => {
                 <div className="follow">
                   <span>Projects</span>
                   <span>
-                    <i className="fa-solid fa-link"></i>Link1
+                    <i className="fa-solid fa-link"></i>Project1
                   </span>
                   <span>
-                    <i className="fa-solid fa-link"></i>Link1
+                    <i className="fa-solid fa-link"></i>Project2
                   </span>
                 </div>
               </>
