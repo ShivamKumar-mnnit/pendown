@@ -60,6 +60,18 @@ const ProfileSchema = new Schema({
     project2:{
         type: String,
     },
+    likes: [
+        {
+          user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'user'
+          },
+          timestamp: {
+            type: Date,
+            default: Date.now
+          }
+        }
+      ],
     date:{
         type: Date,
         default : Date.now

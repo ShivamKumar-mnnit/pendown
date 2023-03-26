@@ -127,9 +127,49 @@ console.log(json);
     }
 
 
+    
+   //like a Profile
+   const likeProfile = async(id) => {
+    //API call
+    const response = await fetch(`${BASE_URL}api/profiles/like/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'auth-token': localStorage.getItem('token')            }
+    });
+const json = await response.json();
+console.log(json);
+
+setProfiles((prevProfiles) =>
+    prevProfiles.map((profile) =>
+      profile._id === id ? { ...profile, likes: json.likes } : profile
+    )
+  );
+
+}
+//unlike a Profile
+const unlikeProfile = async(id) => {
+//API call
+const response = await fetch(`${BASE_URL}api/profiles/unlike/${id}`, {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json',
+        'auth-token': localStorage.getItem('token')            }
+});
+const json = await response.json();
+console.log(json);
+
+setProfiles((prevProfiles) =>
+    prevProfiles.map((profile) =>
+      profile._id === id ? { ...profile, likes: json.likes } : profile
+    )
+  );
+}
+
+
     return (
 
-        <ProfileContext.Provider value={{ profiles,setProfiles, addProfile, deleteProfile, editProfile,getProfiles ,displayProfiles}}>
+        <ProfileContext.Provider value={{ profiles,setProfiles, addProfile, deleteProfile, editProfile,getProfiles ,displayProfiles,likeProfile,unlikeProfile}}>
             {props.children}
         </ProfileContext.Provider>
 
