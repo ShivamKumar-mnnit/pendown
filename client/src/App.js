@@ -19,6 +19,7 @@ import Body from "./components/body/body";
 import Alert from './Alert';
 
 import Team from "./components/team/team";
+import Policy from './components/PrivacyPolicy/privacyPolicy'
 
 
 import NoteState from './Context/notes/NotesState';
@@ -62,6 +63,7 @@ function App() {
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
       <Route element={<HomeMat showAlert={showAlert}/>} exact path='allmaterial/addmaterial' ></Route>
+      <Route element={<Policy showAlert={showAlert}/>} exact path='/policies' ></Route>
 
 
     
