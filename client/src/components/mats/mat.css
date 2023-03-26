@@ -1,3 +1,10 @@
+.bodymat{
+    background-image: url(../../img/studyMaterialBg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
 .addmat{
     color: white;
 }

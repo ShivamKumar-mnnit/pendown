@@ -10,7 +10,7 @@ const Matitem = (props) => {
   return (
     <>
     
-        <div className="col-md-6 d-flex justify-content-center  ">
+        <div className="col-md-6 d-flex justify-content-center  bodymat">
 
         <div class="card">
   <div class="card-body">

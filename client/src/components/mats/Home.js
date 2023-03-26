@@ -5,7 +5,7 @@ import Mats from './Mats';
 const Home = (props) => {
   const {showAlert} = props;
   return (
-  <div className='notebackground' id='addmat'>
+  <div className='notebackground bodymat' id='addmat'>
         
     <Mats showAlert={showAlert}/>
 
