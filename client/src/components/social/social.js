@@ -30,7 +30,7 @@ const Social = (props) => {
 
   return (
     <>
-
+    <Link to="/profile"><button className="btn btn-outline-warning my-2">My Profile</button></Link>
     <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{
               setsearchTerm(e.target.value);
@@ -39,8 +39,8 @@ const Social = (props) => {
     
           <div className="row my-3">
             <div className='d-flex'>
-            <h2 className='px-5 cardtext'>All Profiles </h2>
-            <Link to="/profile"><button className="btn btn-outline-warning ">Your Profile</button></Link>
+            <h2 className='px-5 cardtext'>All Users </h2>
+            
             </div>
             <div className="container mx-2 px-5">
             {profiles.length===0 && 'No Users to display'}

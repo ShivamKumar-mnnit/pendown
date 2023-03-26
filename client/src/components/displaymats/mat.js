@@ -96,7 +96,7 @@ const onChange = (e)=>{
         <h2 className='px-5 cardtext'>All Study Material </h2>
         <Link to="addmaterial"><button className="btn btn-outline-warning ">add your Material</button></Link>
         </div>
-        <p className='px-5 cardtext'>Only the organizer can edit or delete an event here</p>
+        <p className='px-5 cardtext'>Hopefull all of us will help eachother to get the most out of it.</p>
         <div className="container mx-2 px-5">
         {mats.length===0 && 'No Events to display'}
         </div>

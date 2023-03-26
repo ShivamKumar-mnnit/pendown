@@ -77,7 +77,7 @@ const Navbar = () => {
         <form className="d-flex" role="search">
             
         <Link to='/allevent'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Events</button></Link>
-        <Link to='/profile'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Your Profile</button></Link>
+        <Link to='/profile'><button className="btn btn-outline-warning mx-1 " type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">My Profile</button></Link>
         <button className="btn btn-outline-warning mx-1" onClick={handleLogout}  type="submit" data-bs-toggle="collapse" data-bs-target="#navbarNav">Logout</button>
       </form>}
             </div>

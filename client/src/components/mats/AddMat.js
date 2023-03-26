@@ -24,7 +24,7 @@ const AddMat = (props) => {
 
   return (
     <div className="container my-3 addmat">
-    <h1 className='addmat'>Add a Mat</h1>
+    <h1 className='addmat'>Add Study Material available to your Drive</h1>
     <form>
   <div className="mb-3">
   <label htmlFor="title" className="form-label">*Title</label>
@@ -41,7 +41,7 @@ const AddMat = (props) => {
   
   
   
-  <button disabled={mat.title.length<5 || mat.description.length<5}  type="submit" className="btn btn-success"  onClick={handleClick}>Add Mat</button>
+  <button disabled={mat.title.length<5 || mat.description.length<5}  type="submit" className="btn btn-success"  onClick={handleClick}>Add Material</button>
   </form>
   </div>
   )

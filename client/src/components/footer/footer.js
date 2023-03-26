@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo1.png'
 
+import { Link as ALink} from 'react-scroll';
+
 const footer = () => {
   return (
     <>
@@ -10,8 +12,7 @@ const footer = () => {
         <div className="row text-center text-md-left">
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Pen down</h5>
-            <p>Your happy place !</p>
-            <p><i className="fas fa-home mr-3"></i> MNNIT Allahabad, UP, India</p>
+            <p><i className="fas fa-home mr-3"></i>Your happy place !</p>
             <p><i className="fas fa-envelope mr-3"></i> 1306shivam@gmail.com</p>
             <p><i className="fas fa-phone mr-3"></i> +91 7017903175</p>
             <p><i className="fas fa-phone mr-3"></i> +91 8432065012</p>
@@ -26,15 +27,15 @@ const footer = () => {
 
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Quick links</h5>
-            <p><Link to="/" className="text-white text-decoration-none">Services</Link></p>
-            <p><Link to="/" className="text-white text-decoration-none">Team</Link></p>
-            <p><Link to="/" className="text-white text-decoration-none">Contact</Link></p>
-            <p><Link to="/" className="text-white text-decoration-none">About us</Link></p>
+            <p><ALink to="services" className="text-white text-decoration-none">Services</ALink></p>
+            <p><Link to="/allprofile" className="text-white text-decoration-none">Social</Link></p>
+            <p><ALink to="contact" className="text-white text-decoration-none">Contact</ALink></p>
+            <p><Link to="/team" className="text-white text-decoration-none">About us</Link></p>
           </div>
 
           <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning" >We are here to make sure that you are always happy !</h5>
-           <img src={logo} alt='...' width={150}/>
+          <Link to='/'> <img src={logo} alt='...' width={150}/></Link>
           </div>
  
         </div>
@@ -52,20 +53,15 @@ const footer = () => {
               <div className="text-center text-md-right">
                 <ul className="list-unstyled list-inline">
                   <li className="list-inline-item">
-                    <Link to="/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-facebook"></i></Link> 
+                    <Link to="https://www.linkedin.com/in/shivam-kumar-9b2520224/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-linkedin-in"></i></Link> 
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-twitter"></i></Link> 
+                    <Link to="https://github.com/MICKEY-mi" className="btn-floating btn-sm text-white fontsize23px"><i className="fa-brands fa-github"></i></Link> 
                   </li>
                   <li className="list-inline-item">
-                    <Link to="/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-google-plus"></i></Link> 
+                    <Link to="https://instagram.com/shivamkumar6188" className="btn-floating btn-sm text-white fontsize23px"><i className="fa-brands fa-instagram"></i></Link> 
                   </li>
-                  <li className="list-inline-item">
-                    <Link to="/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-linkedin-in"></i></Link> 
-                  </li>
-                  <li className="list-inline-item">
-                    <Link to="/" className="btn-floating btn-sm text-white fontsize23px"><i className="fab fa-youtube"></i></Link> 
-                  </li>
+                 
                 </ul>
               </div>
              </div>

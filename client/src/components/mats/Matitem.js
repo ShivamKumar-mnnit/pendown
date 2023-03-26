@@ -10,24 +10,30 @@ const Matitem = (props) => {
   return (
     <>
     
-        <div className="col-md-6 d-flex justify-content-center ">
+        <div className="col-md-6 d-flex justify-content-center  ">
 
-        <div className="card m-2 cbl text-center cardofevent matcard ">
-  
-  <div className="card-body bgmat">
-    <h2 className="card-title mb-4 addnote">{mat.title}</h2>
-    <p className="card-text addnote">{mat.description}</p>
-    <div>
-    <a href={mat.link} className="card-text cardlink" target='_blank' rel='noreferrer'>{mat.link}</a>
-    </div>
+        <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{mat.title}</h5>
 
-    <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteMat(mat._id);
+    <i className="fa-solid fa-trash mx-1 my-1" onClick={()=>{deleteMat(mat._id);
     props.showAlert("Deleted Succesfully","success");
     }}></i>
 
-<i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateMat(mat);}}></i>
+<i className="fa-solid fa-pen-to-square mx-1 my-1" onClick={()=>{updateMat(mat);}}></i>
+      
 
-  </div>
+    <p class="card-text">{mat.description}</p>
+    <a href={mat.link} class="card-link"><i class="fa-solid fa-link"></i>{mat.link}</a>
+    
+      
+    
+      
+
+    
+ </div>
+ 
+
 </div>
 
         </div>

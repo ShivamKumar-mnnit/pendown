@@ -47,13 +47,13 @@ const Mats = (props) => {
     <>
     <AddMat showAlert={props.showAlert} />
     <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Mat
+      Material
     </button>
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">Edit Note</h5>
+            <h5 className="modal-title" id="exampleModalLabel">Edit Material</h5>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="modal-body">
@@ -74,7 +74,7 @@ const Mats = (props) => {
           </div>
           <div className="modal-footer">
             <button ref = {refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button disabled={mat.etitle.length<5 || mat.edescription.length<5} onClick={handleClick} type="button" className="btn btn-primary">Update Mat</button>
+            <button disabled={mat.etitle.length<5 || mat.edescription.length<5} onClick={handleClick} type="button" className="btn btn-primary">Update Material</button>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Mats = (props) => {
 
 
     <div className="row my-3">
-      <h2 className='px-5 addnote'>Your Notes</h2>
+      <h2 className='px-5 addnote'>Your Contributions</h2>
       <div className="container mx-2 px-5">
       {mats.length===0 && 'No Notes to display'}
       </div>

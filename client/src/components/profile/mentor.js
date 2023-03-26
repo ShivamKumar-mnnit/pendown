@@ -100,7 +100,7 @@ const onChange = (e)=>{
               <div className="mb-3">
                 <label htmlFor="bio" className="form-label">Bio</label>
                 
-                <textarea name="ebio" id="ebio" cols="30" rows="10" value={profile.ebio} onChange={onChange}></textarea>
+                <textarea name="ebio" id="ebio" cols="30" rows="10" value={profile.ebio} placeholder="bio" onChange={onChange}></textarea>
               </div>
               
               <div className="mb-3">
@@ -155,8 +155,8 @@ const onChange = (e)=>{
     </div>
 
 
-    <div className="container row my-3">
-        <h2 className='px-5'>Your Profile</h2>
+    <div className="container row my-3 mx-auto">
+        <h2 className='px-5'>My Profile</h2>
         <div className="container mx-2 px-5">
         {profiles.length===0 && 'No Profile to display'}
         </div>

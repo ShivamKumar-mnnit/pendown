@@ -1,5 +1,6 @@
 import React,{ useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { Link as ALink} from 'react-scroll';
 import './css/style.css';
 import './css/clash-display.css';
 import logo from '../../img/logo1.png';
@@ -35,8 +36,11 @@ const Body = () => {
                             <h1 data-aos="fade-left" className=" text-white fw-semibold display-1">Welcome to Pendown</h1>
                             <h5 className="text-black mt-4 mb-5 fs-4" data-aos="fade-right">Striving for excellence with each and every interaction </h5>
                             <div data-aos="fade-up" data-aos-delay="50">
-                                <Link to="#" className="btn btn-brand me-2">Get Started</Link>
-                                <Link to="#" className="btn btn-light ms-2">Our Portfolio</Link>
+                              
+                                <ALink to="services" className="btn btn-brand me-2">Our Services</ALink>
+                                <ALink to="contact" className="btn btn-light me-2">Contact us</ALink>
+                               
+                                
                             </div>
                         </div>
                     </div>
@@ -59,8 +63,9 @@ const Body = () => {
                     </div>
                     <div className="row justify-content-between align-items-center">
                         <div className="col-lg-6" data-aos="fade-down" data-aos-delay="50">
-                            <img src={logo} alt="" />
+                        <img src={logo} alt="" />
                         </div>
+                        
                         <div data-aos="fade-down" data-aos-delay="150" className="col-lg-5">
                             <h1>Features of Pendown</h1>
                             
@@ -154,7 +159,7 @@ const Body = () => {
                         <div className="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
                             <div className="service theme-shadow p-lg-5 p-4">
                                 
-                                <h5 className="mt-4 mb-3">Create Events</h5>
+                                <h5 className="mt-4 mb-3">Create Events and Meets</h5>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
                             </div>
                         </div>
@@ -167,20 +172,16 @@ const Body = () => {
                 <div className="container text-center">
                     <div className="row g-4">
                         <div className="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                            <h1 className="text-white display-4">90,00+</h1>
-                            <h6 className="text-uppercase mb-0 text-white mt-3">Total Downloads</h6>
+                            
                         </div>
                         <div className="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="250">
-                            <h1 className="text-white display-4">58K+</h1>
-                            <h6 className="text-uppercase mb-0 text-white mt-3">Trusted Clients</h6>
+                           
                         </div>
                         <div className="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="350">
-                            <h1 className="text-white display-4">5M+</h1>
-                            <h6 className="text-uppercase mb-0 text-white mt-3">THemes Designed</h6>
+                           
                         </div>
                         <div className="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="450">
-                            <h1 className="text-white display-4">100+</h1>
-                            <h6 className="text-uppercase mb-0 text-white mt-3">Team Members</h6>
+                            
                         </div>
                     </div>
                 </div>
@@ -201,7 +202,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">Testimonials</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                                <p>We love to craft digital experiences for brands rather than crap and do crazy skills</p>
                             </div>
                         </div>
                     </div>
@@ -344,7 +345,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">Team Members</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and and do crazy skills</p>
+                                <p>We love to craft digital experiences for brands rather than crap and and do crazy skills</p>
                             </div>
                         </div>
                     </div>
@@ -441,7 +442,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">Recent News & Articles</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                                <p>will be available soon...</p>
                             </div>
                         </div>
                     </div>
@@ -451,9 +452,8 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/blog-post-1.jpg" alt="" />
                                 </div>
-                                <h5 className="mt-4">Web Design 2022</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                                <Link to="#">Read More</Link>
+                               
+                                
                             </div>
                         </div>
                         <div className="col-md-4" data-aos="fade-down" data-aos-delay="250">
@@ -461,9 +461,7 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/blog-post-2.jpg" alt="" />
                                 </div>
-                                <h5 className="mt-4">Web Design 2022</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                                <Link to="#">Read More</Link>
+                               
                             </div>
                         </div>
                         <div className="col-md-4" data-aos="fade-down" data-aos-delay="350">
@@ -471,9 +469,7 @@ const Body = () => {
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/blog-post-3.jpg" alt="" />
                                 </div>
-                                <h5 className="mt-4">Web Design 2022</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
-                                <Link to="#">Read More</Link>
+                               
                             </div>
                         </div>
                     </div>

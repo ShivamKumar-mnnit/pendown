@@ -54,7 +54,7 @@ const AddMentor = (props) => {
               </div>
               
               <div className="mb-3">
-                <label htmlFor="tag" className="form-label">Tag</label>
+                <label htmlFor="tag" className="form-label">Tag/Position</label>
                 <input type="text" className="form-control" id="tag" name='tag' aria-describedby="emailHelp" value={profile.tag} onChange={onChange}  />
               </div>
               

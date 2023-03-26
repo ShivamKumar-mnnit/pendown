@@ -33,7 +33,7 @@ const Mentoritem = (props) => {
                                     <Link className="nav-link active" id="home-tab" data-toggle="tab" to="/profile" role="tab" aria-controls="home" aria-selected="true">About</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" id="profile-tab" data-toggle="tab" to="/event" role="tab" aria-controls="profile" aria-selected="false">Events</Link>
+                                    <Link className="nav-link" id="profile-tab" data-toggle="tab" to="/allprofile" role="tab" aria-controls="profile" aria-selected="false">Social</Link>
                                 </li>
                             </ul>
                         </div>
