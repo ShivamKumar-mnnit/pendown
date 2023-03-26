@@ -50,7 +50,7 @@ const Body = () => {
 
 
             {/*about*/}
-            <section id="about" className="section-padding">
+            <section id="about" className="section-padding aboutbackground">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
@@ -160,7 +160,7 @@ const Body = () => {
                             <div className="service theme-shadow p-lg-5 p-4">
                                 
                                 <h5 className="mt-4 mb-3">Create Events and Meets</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat sunt distinctio?</p>
+                                <p>Under this section Mentor can Create events, make announcements , declare notices all on the same canvas</p>
                             </div>
                         </div>
                     </div>
@@ -345,7 +345,7 @@ const Body = () => {
                             <div className="section-title">
                                 <h1 className="display-4 fw-semibold">Team Members</h1>
                                 <div className="line"></div>
-                                <p>We love to craft digital experiences for brands rather than crap and and do crazy skills</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -363,13 +363,13 @@ const Body = () => {
                             </div>
                         </div>
                         <div className="col-md-4 my-5 py-5" data-aos="fade-down" data-aos-delay="250">
-                            <div className="team-member image-zoom">
+                            <div className="team-member image-zoom my-3">
                                 <div className="image-zoom-wrapper">
                                     <img src="./assets/images/person-2.jpg" alt="" />
                                 </div>
                                 <Link to='/team'> <div className="team-member-content">
-                                    <h4 className="text-white">Garv Petwal</h4>
-                                    <p className="mb-0 text-white">Frontend designer</p>
+                                    <h4 className="text-white">Ayush Kumar</h4>
+                                 <p className="mb-0 text-white">Frontend & <br></br>Content-management</p>
                                 </div>
                                 </Link>
                             </div>
@@ -381,8 +381,8 @@ const Body = () => {
                                 </div>
                                 <Link to='/team'>
                                 <div className="team-member-content">
-                                    <h4 className="text-white">Ayush Kumar</h4>
-                                    <p className="mb-0 text-white">Frontend and UI</p>
+                                    <h4 className="text-white">Garv Petwal</h4>
+                                    <p className="mb-0 text-white">Frontend designer</p>
                                 </div>
                                 </Link>
                             </div>
