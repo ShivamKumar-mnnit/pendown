@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
-const materialContext = createContext();
+const matContext = createContext();
 
 
-export default materialContext;
+export default matContext;
 
 //react m context api ka use krna caahta hu dedo

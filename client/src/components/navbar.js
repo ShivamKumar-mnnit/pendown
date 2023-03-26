@@ -28,6 +28,7 @@ const Navbar = () => {
             </Link>
 
             <Link to='/quicknotes'><button className="btn btn-outline-warning mx-1 " type="submit"  data-bs-target="#navbarNav">Quick Note</button></Link>
+           
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,6 +36,10 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
+
+                <Link to='/allmaterial'><li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                       <div className="nav-link">Study Material</div>
+                    </li></Link>
 
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="about">About</ALink>

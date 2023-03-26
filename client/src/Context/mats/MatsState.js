@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import MaterialContext from "./MaterialContext";
+import MatContext from "./MatContext";
 import {BASE_URL} from "../helper"
 
-const MaterialState = (props) => {
-    
+const MatState = (props) => {
 
-    const materialsInitial = []
+    const matsInitial = []
 
-    const [materials, setMaterials] = useState(materialsInitial);
+    const [mats, setMats] = useState(matsInitial);
 
 
-    //Get all materials for single user
-    const getMaterials = async () => {
+    //Get all mats of one user
+    const getMats = async () => {
         //API call
         const response = await fetch(`${BASE_URL}api/materials/fetchallmaterials`, {
             method: 'GET',
@@ -21,12 +20,12 @@ const MaterialState = (props) => {
         });
 
         const json = await response.json();
-        setMaterials(json);
+        setMats(json);
 
        }
 
-    //Get all materials 
-    const displayMaterials = async () => {
+       //Get all mats 
+    const displayMats = async () => {
         //API call
         const response = await fetch(`${BASE_URL}api/materials/displayallmaterials`, {
             method: 'GET',
@@ -36,13 +35,14 @@ const MaterialState = (props) => {
         });
 
         const json = await response.json();
-        setMaterials(json);
+        setMats(json);
 
        }
 
 
-    //Add a material
-    const addMaterial = async (title, description,link) => {
+
+    //Add a Mat
+    const addMat = async (title, description, link) => {
         //TODO : API call
         //API call
 
@@ -56,15 +56,15 @@ const MaterialState = (props) => {
         });
 
        
-        const material = await response.json();
-        setMaterials(materials.concat(material));
-        getMaterials(setMaterials);
+        const mat = await response.json();
+        setMats(mats.concat(mat));
+        getMats(setMats);
 
     }
 
 
-    //Delete a material
-    const deleteMaterial = async(id) => {
+    //Delete a Mat
+    const deleteMat = async(id) => {
         //API call
         const response = await fetch(`${BASE_URL}api/materials/deletematerial/${id}`, {
             method: 'DELETE',
@@ -76,14 +76,14 @@ const MaterialState = (props) => {
  console.log(json);
 
 
-        const newMaterials = materials.filter((material) => { return material._id !== id })
-        setMaterials(newMaterials);
+        const newMats = mats.filter((mat) => { return mat._id !== id })
+        setMats(newMats);
 
     }
 
 
-    //Edit a Material
-    const editMaterial = async (id, title, description,link) => {
+    //Edit a Mat
+    const editMat = async (id, title, description, link) => {
         //API call
 
         const response = await fetch(`${BASE_URL}api/materials/updatematerial/${id}`, {
@@ -91,37 +91,38 @@ const MaterialState = (props) => {
             headers: {
                 'Content-Type': 'application/json',
                 'auth-token': localStorage.getItem('token')            },
-            body: JSON.stringify({title, description,link})
+            body: JSON.stringify({title, description, link})
         });
 const json = await response.json();
 console.log(json);
        
 
 
-        let newMaterials = JSON.parse(JSON.stringify(materials))
+        let newMats = JSON.parse(JSON.stringify(mats))
         //logic to edit in client
-        for (let index = 0; index < newMaterials.length; index++) {
-            const element = newMaterials[index];
+        for (let index = 0; index < newMats.length; index++) {
+            const element = newMats[index];
             if (element._id === id) {
-                newMaterials[index].title = title;
-                newMaterials[index].description = description;
-                newMaterials[index].link = link;
+                newMats[index].title = title;
+                newMats[index].description = description;
+                newMats[index].link = link;
                 break;
             }
            
         }
-        setMaterials(newMaterials);
+        setMats(newMats);
     }
 
 
     return (
 
-        <MaterialContext.Provider value={{ materials,setMaterials, addMaterial, deleteMaterial, editMaterial,getMaterials,displayMaterials }}>
+        <MatContext.Provider value={{ mats,setMats, addMat, deleteMat, editMat,getMats,displayMats }}>
             {props.children}
-        </MaterialContext.Provider>
+        </MatContext.Provider>
 
     )
 }
 
 
-export default MaterialState;
+
+export default MatState;
