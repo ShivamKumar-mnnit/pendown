@@ -40,6 +40,9 @@ const Navbar = () => {
                 <Link to='/allmaterial'><li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                        <div className="nav-link">Study Material</div>
                     </li></Link>
+                    <Link to='/allprofile'><li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                       <div className="nav-link">Social</div>
+                    </li></Link>
 
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="about">About</ALink>
