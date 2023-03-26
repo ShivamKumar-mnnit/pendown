@@ -16,6 +16,17 @@ router.get('/fetchprofile', fetchuser, async (req, res) => {
     }
 })
 
+//Route1.2 : get all the profiles  using : GET "/api/events/displayallprofiles"  login required
+router.get('/displayallprofiles', fetchuser, async (req, res) => {
+    try {
+        const profiles = await Profile.find()
+        res.json(profiles);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal Server Error");
+    }
+})
+
 
 //Route2 : add a new profile using : POST "/api/profiles/addprofile"  login required
 router.post('/addprofile', fetchuser, [

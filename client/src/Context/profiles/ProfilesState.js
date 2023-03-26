@@ -9,7 +9,7 @@ const ProfileState = (props) => {
     const [profiles, setProfiles] = useState(profilesInitial);
 
 
-    //Get all profiles
+    //Get your profile
     const getProfiles = async () => {
         //API call
         const response = await fetch(`${BASE_URL}api/profiles/fetchprofile`, {
@@ -23,6 +23,22 @@ const ProfileState = (props) => {
         setProfiles(json);
 
        }
+
+        //Get all profiles 
+    const displayProfiles = async () => {
+        //API call
+        const response = await fetch(`${BASE_URL}api/profiles/displayallprofiles`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'auth-token': localStorage.getItem('token')            },
+        });
+
+        const json = await response.json();
+        setProfiles(json);
+
+       }
+
 
 
 
@@ -113,7 +129,7 @@ console.log(json);
 
     return (
 
-        <ProfileContext.Provider value={{ profiles,setProfiles, addProfile, deleteProfile, editProfile,getProfiles }}>
+        <ProfileContext.Provider value={{ profiles,setProfiles, addProfile, deleteProfile, editProfile,getProfiles ,displayProfiles}}>
             {props.children}
         </ProfileContext.Provider>
 

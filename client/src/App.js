@@ -10,6 +10,7 @@ import Signup from "./components/signup/signup";
 import Footer from './components/footer/footer';
 import HomeEvent from "./components/event/Home";
 import HomedisplayEvent from './components/displayevents/Home';
+import HomedisplayProfile from './components/social/Home';
 import HomedisplayMat from './components/displaymats/Home';
 import Mentor from "./components/profile/Home";
 import HomeNote from './components/quicknotes/Home';
@@ -56,6 +57,7 @@ function App() {
       <Route element={<Signup showAlert={showAlert}/>} exact path='/signup' ></Route>
       <Route element={<HomeEvent showAlert={showAlert}/>} exact path='allevent/addevent' ></Route>
       <Route element={<HomedisplayEvent showAlert={showAlert}/>} exact path='/allevent' ></Route>
+      <Route element={<HomedisplayProfile showAlert={showAlert}/>} exact path='/allprofile' ></Route>
       <Route element={<HomedisplayMat showAlert={showAlert}/>} exact path='/allmaterial' ></Route>
       <Route element={<Mentor showAlert={showAlert}/>} exact path='/profile' ></Route>
       <Route element={<HomeNote showAlert={showAlert}/>} exact path='/quicknotes' ></Route>
