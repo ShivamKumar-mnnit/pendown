@@ -326,3 +326,6 @@ footer .line {
 .backgroundwhite{
     background-color: white;
 }
+.aboutbackground{
+    background-image: linear-gradient(skyblue,rgb(86, 197, 86));
+}
