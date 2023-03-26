@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo1.png'
+import './footer.css';
 
 import { Link as ALink} from 'react-scroll';
 
@@ -14,8 +15,7 @@ const footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Pen down</h5>
             <p><i className="fas fa-home mr-3"></i>Your happy place !</p>
             <p><i className="fas fa-envelope mr-3"></i> 1306shivam@gmail.com</p>
-            <p><i className="fas fa-phone mr-3"></i> +91 7017903175</p>
-            <p><i className="fas fa-phone mr-3"></i> +91 8432065012</p>
+            <button className='btn btn-success donatebutton'>Donate</button>
 
           </div>
           <div className="col-md-2 col-xl-2 mx-auto mt-3">
