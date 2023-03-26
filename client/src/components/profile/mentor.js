@@ -120,12 +120,12 @@ const onChange = (e)=>{
               </div>
               
               <div className="mb-3">
-                <label htmlFor="link1" className="form-label">Link1</label>
+                <label htmlFor="link1" className="form-label">Instagram</label>
                 <input type="text" className="form-control" id="elink1" name='elink1' aria-describedby="emailHelp" value={profile.elink1} onChange={onChange}   />
               </div>
               
               <div className="mb-3">
-                <label htmlFor="link2" className="form-label">Link2</label>
+                <label htmlFor="link2" className="form-label">Link1</label>
                 <input type="text" className="form-control" id="elink2" name='elink2' aria-describedby="emailHelp" value={profile.elink2} onChange={onChange}  />
               </div>
               

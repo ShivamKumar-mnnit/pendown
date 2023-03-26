@@ -80,12 +80,12 @@ const AddMentor = (props) => {
               </div>
               
               <div className="mb-3">
-                <label htmlFor="link1" className="form-label">Link1</label>
+                <label htmlFor="link1" className="form-label">Instagram</label>
                 <input type="text" className="form-control" id="link1" name='link1' aria-describedby="emailHelp" value={profile.link1} onChange={onChange}   />
               </div>
               
               <div className="mb-3">
-                <label htmlFor="link2" className="form-label">Link2</label>
+                <label htmlFor="link2" className="form-label">Link1</label>
                 <input type="text" className="form-control" id="link2" name='link2' aria-describedby="emailHelp" value={profile.link2} onChange={onChange}  />
               </div>
               
