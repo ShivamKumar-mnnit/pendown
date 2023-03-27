@@ -29,7 +29,7 @@ if(user){
     return res.status(400).json({error : 'Sorry a user with this email exist '})
 }
 
-const salt = await bcrypt.genSalt(10);
+const salt = await bcrypt.genSalt(process.env.SALT);
 secPass= await bcrypt.hash(req.body.password,salt);
 
 //create a new user
@@ -115,7 +115,6 @@ router.post('/getuser',fetchuser, async(req,res)=>{
         const user = await User.findById(userId).select('-password');   
         res.send(user); 
     }catch(error){
-        console.log(error.message);
         res.status(500) .send("Internal Server Error")
     }
     })

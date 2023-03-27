@@ -11,7 +11,6 @@ router.get('/fetchprofile', fetchuser, async (req, res) => {
         const profiles = await Profile.find({ user: req.user.id })
         res.json(profiles);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -22,7 +21,6 @@ router.get('/displayallprofiles', fetchuser, async (req, res) => {
         const profiles = await Profile.find()
         res.json(profiles);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -64,7 +62,6 @@ router.post('/addprofile', fetchuser, [
 
         res.json({ savedProfile });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -101,7 +98,6 @@ router.put('/updateprofile/:id', fetchuser, async (req, res) => {
         profile = await Profile.findByIdAndUpdate(req.params.id, { $set: newProfile }, { new: true })
         res.json({ profile });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -122,7 +118,6 @@ router.delete('/deleteprofile/:id', fetchuser, async (req, res) => {
         profile = await Profile.findByIdAndDelete(req.params.id)
         res.json({ "Success": "Profile has been deleted", profile: profile });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -147,7 +142,6 @@ router.put('/like/:id', fetchuser, async (req, res) => {
   
       res.json(profile.likes);
     } catch (error) {
-      console.error(error.message);
       res.status(500).json({ message: 'Server Error' });
     }
   });
@@ -173,7 +167,6 @@ router.put('/unlike/:id', fetchuser, async (req, res) => {
   
       res.json(profile.likes);
     } catch (error) {
-      console.error(error.message);
       res.status(500).json({ message: 'Server Error' });
     }
   });

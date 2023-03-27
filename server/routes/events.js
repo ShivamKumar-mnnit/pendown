@@ -11,7 +11,6 @@ router.get('/fetchallevents', fetchuser, async (req, res) => {
         const events = await Event.find({ user: req.user.id })
         res.json(events);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -23,7 +22,6 @@ router.get('/displayallevents', fetchuser, async (req, res) => {
         const events = await Event.find()
         res.json(events);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -56,7 +54,6 @@ router.post('/addevent', fetchuser, [
 
         res.json({ savedEvent });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -83,7 +80,6 @@ router.put('/updateevent/:id', fetchuser, async (req, res) => {
         event = await Event.findByIdAndUpdate(req.params.id, { $set: newEvent }, { new: true })
         res.json({ event });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -104,7 +100,6 @@ router.delete('/deleteevent/:id', fetchuser, async (req, res) => {
         event = await Event.findByIdAndDelete(req.params.id)
         res.json({ "Success": "Event has been deleted", event: event });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 })

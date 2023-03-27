@@ -6,7 +6,7 @@ mongoose.set('strictQuery', false);
 
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI, ()=>{
-        console.log(`Connected to database succesfully on cluster shopzo`);
+        console.log(`Connected to database succesfully`);
     });
 }
 

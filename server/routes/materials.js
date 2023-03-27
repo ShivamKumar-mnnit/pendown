@@ -11,7 +11,6 @@ router.get('/fetchallmaterials', fetchuser, async (req, res) => {
         const materials = await Material.find({ user: req.user.id })
         res.json(materials);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -23,7 +22,6 @@ router.get('/displayallmaterials', fetchuser, async (req, res) => {
         const materials = await Material.find()
         res.json(materials);
     } catch (error) {
-        console.error(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
@@ -54,7 +52,6 @@ router.post('/addmaterial', fetchuser, [
 
         res.json({ savedMaterial });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -79,7 +76,6 @@ router.put('/updatematerial/:id', fetchuser, async (req, res) => {
        material = await Material.findByIdAndUpdate(req.params.id, { $set: newMaterial }, { new: true })
         res.json({ material });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 
@@ -100,7 +96,6 @@ router.delete('/deletematerial/:id', fetchuser, async (req, res) => {
         material = await Material.findByIdAndDelete(req.params.id)
         res.json({ "Success": "Material has been deleted", material: material });
     } catch (error) {
-        console.log(error.message);
         res.status(500).send("Internal Server Error");
     }
 })
