@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo1.png'
 import './footer.css';
+import Donate from '../../img/donate.jpg';
 
 import { Link as ALink} from 'react-scroll';
 
@@ -15,14 +16,44 @@ const footer = () => {
             <h5 className="text-uppercase mb-4 font-weight-bold text-warning">Pen down</h5>
             <p><i className="fas fa-home mr-3"></i>Your happy place !</p>
             <p><i className="fas fa-envelope mr-3"></i> 1306shivam@gmail.com</p>
-            <button className='btn btn-success donatebutton'>Donate</button>
+            
+            <button type='button' className='btn btn-success donatebutton' data-bs-toggle="modal" data-bs-target="#exampleModal">Donate</button>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Donate</h1><br/>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5 class="modal-title fs-5" id="exampleModalLabel">All the Donatation will be used for hosting and better Servers for website</h5>
+<img src={Donate} alt="..." />
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
           </div>
           <div className="col-md-2 col-xl-2 mx-auto mt-3">
             <h5 className="text-upparcase mb-4 fond-weight-bond text-warning">Legal stuff</h5>
-            <p> <Link to="/" className="text-white text-decoration-none">Disclaimer</Link></p>
-            <p> <Link to="/" className="text-white text-decoration-none">Privacy Policy</Link></p>
-            <p> <Link to="/" className="text-white text-decoration-none">Terms of service</Link></p>
+            <p> <Link to="/policies" className="text-white text-decoration-none">Disclaimer</Link></p>
+            <p> <Link to="/policies" className="text-white text-decoration-none">Privacy Policy</Link></p>
+            <p> <Link to="/policies" className="text-white text-decoration-none">Terms of service</Link></p>
           </div>
 
           <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">

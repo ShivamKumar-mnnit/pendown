@@ -11,12 +11,16 @@ const Socialitem = (props) => {
   const handleLikeClick = () => {
     
       likeProfile(profile._id);
+      window.location.reload(); 
+      alert('Profile liked');
     
     
   };
   const handleUnLikeClick = () => {
   
       unlikeProfile(profile._id);
+      window.location.reload(); 
+      alert('Profile unliked')
    
   };
 
@@ -73,12 +77,13 @@ const Socialitem = (props) => {
               className="fa-solid fa-heart"
             ></i>like
             </div>
+            
             <div onClick={handleUnLikeClick}>
              <i 
               className="fa-regular fa-heart"
             ></i>Unlike
             </div>
-            likes : {profile.likes ? profile.likes.length:'some error occured please refresh the page'}
+            likes : {profile.likes ? profile.likes.length:'0'}
           </span>
          
           
