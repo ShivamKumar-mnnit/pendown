@@ -50,9 +50,9 @@ const Signin = (props) => {
     <div className="card bg-color">
     <form onSubmit={handleSubmit} className='container --bs-light '>
       <div className="text-center">
-        <div className="logo"><Link to="/"><img src={logo} alt="#" /></Link></div>
+        <div className="logo "><Link to="/"><img src={logo} alt="#" width={130} /></Link></div>
     <div className='bold my-1 disabled'>Login</div>
-    <div className="text-center my-1">New to Pendown? Signup for free </div>
+    <div className="text-center my-1">New to Pendown? <Link to='/signup'>Signup for free</Link> </div>
     </div>
     <div className="mb-2">
       <label htmlFor="exampleInputEmail1" className="form-label mb-0">Email address</label>

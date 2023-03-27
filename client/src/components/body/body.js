@@ -217,13 +217,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-1.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                      
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>
@@ -238,13 +238,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-2.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                        
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>
@@ -259,13 +259,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-3.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                        
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>
@@ -280,13 +280,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-4.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                       
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>
@@ -301,13 +301,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-5.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                        
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>
@@ -322,13 +322,13 @@ const Body = () => {
                                         <i className="ri-star-fill"></i>
                                         <i className="ri-star-fill"></i>
                                     </div>
-                                    <p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+                                    <p></p>
                                 </div>
                                 <div className="review-person mt-4 d-flex align-items-center">
                                     <img className="rounded-circle" src="./assets/images/avatar-6.jpg" alt="" />
                                     <div className="ms-3">
-                                        <h5>Dianne Russell</h5>
-                                        <small>UX Architect</small>
+                                        
+                                        <small></small>
                                     </div>
                                 </div>
                             </div>

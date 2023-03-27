@@ -62,13 +62,13 @@ const Signup = (props) => {
     </div>
     <div className="mb-2">
       <label htmlFor="exampleInputPassword1" className="form-label mb-0">Create Password</label>
-      <input type="password" className="form-control" id="password" name="password" onChange={onChange} minlenght={8} required />
+      <input type="password" className="form-control" id="password" name="password" onChange={onChange} minlenght={8} required placeholder='password should be atleast 8 character long' />
       <div id="emailHelp" className="form-text">It is recommanded to create a strong password.</div>
     </div>
     <div className="mb-2">
       <label htmlFor="exampleInputPassword1" className="form-label mb-0">Confirm Password</label>
       <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} minlenght={8} required />
-      <div id="emailHelp" className="form-text">It is recommanded to create a strong password.</div>
+      
     </div>
      
   <div className="col-12">

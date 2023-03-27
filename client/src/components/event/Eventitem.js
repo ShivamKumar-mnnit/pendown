@@ -28,9 +28,9 @@ const Eventitem = (props) => {
     </div>
     <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteEvent(event._id);
     props.showAlert("Deleted Succesfully","success");
-    }}></i>
+    }}>D</i>
 
-<i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateEvent(event);}}></i>
+<i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateEvent(event);}}>E</i>
 
   </div>
 </div>

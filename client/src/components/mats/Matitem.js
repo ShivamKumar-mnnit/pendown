@@ -18,9 +18,9 @@ const Matitem = (props) => {
 
     <i className="fa-solid fa-trash mx-1 my-1" onClick={()=>{deleteMat(mat._id);
     props.showAlert("Deleted Succesfully","success");
-    }}></i>
+    }}>D</i>
 
-<i className="fa-solid fa-pen-to-square mx-1 my-1" onClick={()=>{updateMat(mat);}}></i>
+<i className="fa-solid fa-pen-to-square mx-1 my-1" onClick={()=>{updateMat(mat);}}>E</i>
       
 
     <p class="card-text">{mat.description}</p>

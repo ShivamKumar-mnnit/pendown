@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import profileContext from '../../Context/profiles/ProfileContext';
 import './Mentoritem.css';
 import {Link} from 'react-router-dom';
+import Profile from '../../img/profile.webp';
 
 const Mentoritem = (props) => {
   const context = useContext(profileContext);
@@ -15,7 +16,7 @@ const Mentoritem = (props) => {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <img src={Profile} alt=""/>
                            
                         </div>
                     </div>
@@ -41,8 +42,8 @@ const Mentoritem = (props) => {
                     <div className="col-md-2">
                     <i className="fa-solid fa-trash mx-2" onClick={()=>{deleteProfile(profile._id);
     props.showAlert("Deleted Succesfully","success");
-    }}></i>
-    <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateProfile(profile);}}></i>
+    }}>D</i>
+    <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateProfile(profile);}}>E</i>
 
                     </div>
                 </div>
