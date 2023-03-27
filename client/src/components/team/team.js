@@ -8,6 +8,7 @@ const Team = () => {
   return (
     <div
     className="bodyaboutus">
+  
     <h1 className="title text-center py-4 titleofevent">About us</h1>
     <div className="row py-5">
      <div className="col-md-6 d-flex justify-content-center ">
@@ -21,6 +22,7 @@ const Team = () => {
   <div className="card-body  ">
 
     <h2 className="card-title">Developers</h2>
+  
 
 
 

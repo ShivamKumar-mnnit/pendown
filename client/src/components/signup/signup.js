@@ -75,7 +75,7 @@ const Signup = (props) => {
     <div className="form-check">
       <input className="form-check-input" type="checkbox" id="gridCheck" />
       <label className="form-check-label" htmlFor="gridCheck">
-      By continuing, you agree to ShopzO's Conditions of Use and Privacy Notice.
+      By continuing, you agree to Pendown's Conditions of Use and Privacy Notice.
       </label>
     </div>
   </div>
