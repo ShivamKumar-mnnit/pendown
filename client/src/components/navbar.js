@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link,  useNavigate } from 'react-router-dom'
+import {Link,  useNavigate,useLocation } from 'react-router-dom'
 import './body/css/style.css';
 import './body/css/clash-display.css';
 import logo from '../img/logo1.png';
@@ -9,6 +9,7 @@ import './navbar.css';
 import { Link as ALink} from 'react-scroll';
 const Navbar = () => {
 
+    const location = useLocation();
 
   const navigate = useNavigate();
   const handleLogout =()=>{
@@ -44,6 +45,8 @@ const Navbar = () => {
                        <div className="nav-link">Social</div>
                     </li></Link>
 
+                    {location.pathname === "/" && (
+                    <>
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="about">About</ALink>
                     </li>
@@ -63,7 +66,8 @@ const Navbar = () => {
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="blog">Blog</ALink>
                     </li>
-
+                    </>
+                    )}
                     
                 </ul>
                 

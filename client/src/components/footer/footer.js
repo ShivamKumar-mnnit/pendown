@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../img/logo1.png'
 import './footer.css';
 import Donate from '../../img/donate.jpg';
 
 import { Link as ALink} from 'react-scroll';
 
-const footer = () => {
+const Footer = () => {
+  const location = useLocation();
   return (
     <>
     <footer className="bg-dark text-white pt-5 pb-4">
@@ -17,7 +18,8 @@ const footer = () => {
             <p><i className="fas fa-home mr-3"></i>Your happy place !</p>
             <p><i className="fas fa-envelope mr-3"></i> 1306shivam@gmail.com</p>
             
-            <button type='button' className='btn btn-success donatebutton' data-bs-toggle="modal" data-bs-target="#exampleModal">Donate</button>
+            {location.pathname === "/" && ( <button type='button' className='btn btn-success donatebutton' data-bs-toggle="modal" data-bs-target="#exampleModal">Donate</button>
+)}
 
 
 
@@ -26,7 +28,12 @@ const footer = () => {
   <div className="modal-dialog">
     <div className="modal-content">
       <div className="modal-header">
-        <h1 className="modal-title fs-5" id="exampleModalLabel">Donate</h1><br/>
+
+      
+  <h1 className="modal-title fs-5" id="exampleModalLabel">Donate</h1>
+
+<br/>
+
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div className="modal-body">
@@ -103,4 +110,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default Footer
