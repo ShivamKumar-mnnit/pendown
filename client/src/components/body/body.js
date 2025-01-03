@@ -337,73 +337,7 @@ const Body = () => {
                 </div>
             </section>
 
-            {/*<!-- TEAM -->*/}
-            <section id="team" className="section-padding backgroundwhite">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
-                            <div className="section-title">
-                                <h1 className="display-4 fw-semibold">Team Members</h1>
-                                <div className="line"></div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row g-4 text-center ">
-                        <div className="col-md-4" data-aos="fade-down" data-aos-delay="150">
-                            <div className="team-member image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/person-1.jpg" alt="" />
-                                </div>
-                                <Link to='/team'><div className="team-member-content">
-                                    <h4 className="text-white">Shivam Kumar</h4>
-                                    <p className="mb-0 text-white">Full stack Developer</p>
-                                </div>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="col-md-4 my-5 py-5" data-aos="fade-down" data-aos-delay="250">
-                            <div className="team-member image-zoom my-3">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/person-2.jpg" alt="" />
-                                </div>
-                                <Link to='/team'> <div className="team-member-content">
-                                    <h4 className="text-white">Ayush Kumar</h4>
-                                 <p className="mb-0 text-white">Frontend & <br></br>Content-management</p>
-                                </div>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="col-md-4 my-5 py-5" data-aos="fade-down" data-aos-delay="350">
-                            <div className="team-member image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/person-3.jpg" alt="" />
-                                </div>
-                                <Link to='/team'>
-                                <div className="team-member-content">
-                                    <h4 className="text-white">Garv Petwal</h4>
-                                    <p className="mb-0 text-white">Frontend designer</p>
-                                </div>
-                                </Link>
-                            </div>
-                        </div>
-                        
-                        <div className="col-md-4 mx-1" data-aos="fade-down" data-aos-delay="350">
-                            <div className="team-member image-zoom">
-                                <div className="image-zoom-wrapper">
-                                    <img src="./assets/images/person-3.jpg" alt="" />
-                                </div>
-                                <Link to='/team'>
-                                <div className="team-member-content">
-                                    <h4 className="text-white">Suresh Barkeshiya</h4>
-                                    <p className="mb-0 text-white">Frontend designer</p>
-                                </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             {/*<!-- CONTACT -->*/}
             <section className="section-padding bg-light" id="contact">

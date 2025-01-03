@@ -57,9 +57,9 @@ const Navbar = () => {
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="reviews">Reviews</ALink>
                     </li>
-                    <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                    {/* <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="team">Team</ALink>
-                    </li>
+                    </li> */}
                     <li className="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                         <ALink className="nav-link" to="contact">Contact</ALink>
                     </li>
